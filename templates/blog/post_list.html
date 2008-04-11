@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block menu %}
+	{% with "Blog" as activemenuitem %}
+	{% include "menu.html" %}
+	{% endwith %}
+{% endblock %}
+{% block content %}
+	{% for post in object_list %}
+	<div style="float:right;">{{ post.pub_date|date }}</div>
+	<h2>{{ post.name }}</h2>
+	<div class='post'>
+	{{ post.text }}
+	</div>
+	{% endfor %}
+{% endblock %}

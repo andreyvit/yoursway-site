@@ -1,0 +1,7 @@
+*.pyc
+.bzr
+.bzrignore
+deseb
+django
+design
+blog.db

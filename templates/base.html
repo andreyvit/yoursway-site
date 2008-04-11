@@ -1,0 +1,35 @@
+<html>
+<head><title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css" />
+</head>
+<body>
+<div class="container">
+  <div class="wrapper">
+    <div id="menu" align="center">
+    {% block menu %}
+    {% with "Consulting" as activemenuitem %}
+    {% include "menu.html" %}
+    {% endwith %}
+    {% endblock %}
+    </div>
+    <div id="logo" align="center">
+      <img src="{{ MEDIA_URL }}images/logo.png"/>
+    </div>
+    <div id="text">
+      {% block content %}
+      <p>
+        Test paragraph
+      </p> 
+      {% endblock %}
+    </div>
+    <div class="screenshots">
+    {% block screenshots %}
+    {% endblock %}
+    </div>
+  </div>
+  <div align="center" class="footer">
+  &copy; 2008 YourSway LLC
+  </div>
+</div>
+</body>
+</html>

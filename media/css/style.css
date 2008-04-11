@@ -1,0 +1,53 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+#menu {
+	padding: 20px 0px;
+	font-size: 14pt;
+}
+
+#menu a{
+	color: #cc6666;
+	margin: 0px 5px;
+}
+#menu .selected {
+	color: #cc0000;
+}
+
+#logo {
+	padding: 10px;
+}
+
+img {
+	border: 0px;
+}
+
+#text {
+	/*max-width: 800px;
+	margin: 0px 100px;*/
+	width: 35em;
+	margin-left: auto;
+	margin-right: auto;
+	
+	font-size: 12pt;
+	
+}
+
+#screenshots {
+	margin-left: -100px;
+}
+
+.container {
+	height: 100%;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+.footer {
+	margin-top: -1.5em;
+}

@@ -1,0 +1,6 @@
+{% for item in global_menu %}
+{% ifequal item.name activemenuitem %}
+<span class="selected">{{ item.name }}</span>{% else %}
+<a href="{{ item.url }}">{{ item.name }}</a>
+{% endifequal %}
+{% endfor %}
