@@ -29,6 +29,7 @@ img {
 	/*max-width: 800px;
 	margin: 0px 100px;*/
 	width: 35em;
+	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	
@@ -40,14 +41,19 @@ img {
 	margin-left: -100px;
 }
 
-.container {
+* {
+	margin: 0;
+}
+html, body {
 	height: 100%;
 }
-
 .wrapper {
+	min-height: 100%;
+	height: auto !important;
 	height: 100%;
+	margin: 0 auto -2em; /* the bottom margin is the negative value of the footer's height */
 }
 
-.footer {
-	margin-top: -1.5em;
+.footer, .push {
+	height: 2em; /* .push must be the same height as .footer */
 }

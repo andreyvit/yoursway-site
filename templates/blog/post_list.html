@@ -1,15 +1,21 @@
 {% extends "base.html" %}
+{% block head %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/blog.css" />
+{% endblock %}
 {% block menu %}
-	{% with "Blog" as activemenuitem %}
-	{% include "menu.html" %}
-	{% endwith %}
+    {% with "Blog" as activemenuitem %}
+    {% include "menu.html" %}
+    {% endwith %}
 {% endblock %}
 {% block content %}
-	{% for post in object_list %}
-	<div style="float:right;">{{ post.pub_date|date }}</div>
-	<h2>{{ post.name }}</h2>
-	<div class='post'>
-	{{ post.text }}
-	</div>
-	{% endfor %}
+    {% for post in object_list %}
+    <div class="post {% cycle odd,even %}">
+        <div class="post-date">{{ post.pub_date|time:"H:i" }}, {{ post.pub_date|date:"N d" }}</div>
+        <div class="post-name">{{ post.name }}</div>
+        <div class='post-text'>
+        {{ post.text|linebreaksbr }}
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}

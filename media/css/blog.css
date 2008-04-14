@@ -1,0 +1,19 @@
+.post {
+	background: url(../images/left.png) no-repeat;
+	background-position: top center;
+}
+
+.post-name {
+	color: #cc0000;
+	text-size: 12pt;
+	text-align: center;
+}
+
+.post .post-date {
+	color: #cc0000;
+	float: right;
+}
+
+.post-text {
+	padding: 10px 0px;
+}
