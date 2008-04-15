@@ -8,7 +8,7 @@ def index(request):
 urlpatterns = patterns('',
     # Example:
     # (r'^yoursway/', include('yoursway.foo.urls')),
-      (r'^$', index),
+#     (r'^$', index),
       (r'^blog/', include('apps.blog.urls')),
     # Uncomment this for admin:
       (r'^admin/', include('django.contrib.admin.urls')),

@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}YourSway{% endblock title %}
+{% block title %}{{ flatpage.title }}{% endblock title %}
 
 {% block menu %}
 {% with "Consulting" as activemenuitem %}
 {% include "menu.html" %}
 {% endwith %}
+{% endblock %}
+
+{% block content %}
+{{ flatpage.content }}
 {% endblock %}
 
 {% block screenshots %}
