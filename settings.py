@@ -50,7 +50,7 @@ host = socket.gethostname()
 if host == 'yoursway.com':
     MEDIA_URL = '/media/'
 else:
-    MEDIA_URL = 'http://django/yoursway/media/'
+    MEDIA_URL = 'http://localhost/yoursway/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.

@@ -6,23 +6,32 @@
 </head>
 <body>
   <div class="wrapper">
-    <div id="menu" align="center">
+    <div id="menu">
+    <img src="{{ MEDIA_URL }}images/logo2-small.gif"/>
     {% block menu %}
     {% with "Consulting" as activemenuitem %}
     {% include "menu.html" %}
     {% endwith %}
     {% endblock %}
+    <hr color="#f79c9f" size="1"/>
     </div>
-    <div id="logo" align="center">
-      <img src="{{ MEDIA_URL }}images/logo.png"/>
+    <div id="contents">
+        <div id="submenu">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Repository</a></li>
+            <li><a href="#">Bug tracker</a></li>
+        </div>
+        <h2>{% block headline %}{% endblock %}</h2>
+        <div id="text">
+        {% block content %}
+        <p>
+          Test paragraph
+        </p> 
+        {% endblock %}
+        </div>
     </div>
-    <div id="text">
-      {% block content %}
-      <p>
-        Test paragraph
-      </p> 
-      {% endblock %}
-    </div>
+    <div style="clear: both"></div>
     <div class="screenshots">
     {% block screenshots %}
     {% endblock %}

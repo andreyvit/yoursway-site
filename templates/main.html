@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}{{ flatpage.title }}{% endblock title %}
+{% block headline %}{{ flatpage.title }}{% endblock %}
 
 {% block menu %}
 {% with "Consulting" as activemenuitem %}
@@ -8,12 +9,11 @@
 {% endwith %}
 {% endblock %}
 
-{% block content %}
-{{ flatpage.content }}
-{% endblock %}
+{% block content %}{{ flatpage.content }}{% endblock %}
 
 {% block screenshots %}
 <table width="100%" cellpadding="0" cellspacing="0">
+<tr>
 <td background="{{ MEDIA_URL }}images/table.png" align="center">
 <img id="screenshots" src="{{ MEDIA_URL }}images/screenshots.png"/> 
 </td>

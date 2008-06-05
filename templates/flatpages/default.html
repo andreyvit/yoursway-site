@@ -4,9 +4,8 @@
   {% include "menu.html" %}
   {% endwith %}
 {% endblock %}
-{% block title %}
-{{ flatpage.title }}
-{% endblock %}
+{% block title %}{{ flatpage.title }}{% endblock %}
+{% block headline %}{{ flatpage.title }}{% endblock %}
 {% block content %}
 {{ flatpage.content }}
 {% endblock %}
