@@ -75,7 +75,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
-ROOT_URLCONF = 'yoursway.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     ROOT_DIR + '/templates'

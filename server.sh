@@ -3,14 +3,15 @@
 # Replace these three settings.
 PROJDIR="$PWD"
 PIDFILE="$PROJDIR/site.pid"
+SOCKFILE="$PROJDIR/site.sock"
 
 case "$1" in 
 	start)
 		if [ ! -f $PIDFILE ]; then
 
 		    sudo su buriy -c "PYTHONPATH="$PROJDIR" \
-                        python $PROJDIR/manage.py runfcgi protocol=scgi host=127.0.0.1 \
-			pidfile=$PIDFILE port=3033 daemonize=true method=threaded"
+                        python $PROJDIR/manage.py runfcgi pidfile=$PIDFILE \
+                               socket=$SOCKFILE daemonize=true method=threaded"
                     echo "Server started."
 		else
 		    echo "Warning: PID file exists!"

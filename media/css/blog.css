@@ -1,6 +1,5 @@
 .post {
-	background: url(../images/left.png) no-repeat;
-	background-position: top center;
+	background: url(../images/left.png) no-repeat 50% -40px;
 }
 
 .post-name {
