@@ -3,6 +3,5 @@
 .bzrignore
 deseb
 django
-design
 blog.db
 site.pid

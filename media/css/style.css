@@ -1,22 +1,25 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
 body {
 	padding: 0;
 	margin: 0;
-	font-family: sans-serif;
 }
 
-#menu {
-	padding: 20px 0px;
-	font-size: 14pt;
-        line-height: 1.5;
+#menu a, #menu span, #menu img {
+	color: #555555;
+	padding: 0 15px;
+	vertical-align: middle;
+	text-decoration: none;
 }
 
-#menu a{
-	color: #cc6666;
-	margin: 0px 5px;
-}
-#menu .selected {
+#menu span.selected {
 	color: #cc0000;
-	margin: 0px 5px;
 }
 
 #logo {
@@ -27,35 +30,72 @@ img {
 	border: 0px;
 }
 
+#submenu {
+	float: left;
+	width: 120px;
+}
+
+#submenu li {
+	list-style: none;
+	height: 2em;
+}
+
+#submenu span.selected {
+	color: #cc0000;
+}
+
+#submenu a {
+	text-decoration: none;
+	color: #999999;
+	font-size: 14px;
+	font-family: verdana;
+}
+
+h2 {
+	height: 2em;
+	font-family: lucida grand, lucida sans, arial, sans-serif;
+}
+
 #text {
+	margin-left: 120px;
+}
+
+#contents {
 	/*max-width: 800px;
 	margin: 0px 100px;*/
 	width: 35em;
-	max-width: 800px;
+	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 	
-	font-size: 12pt;
-	
+	font-size: 100%;
+}
+
+#contents li, #contents p {
+	margin: 0.5em 0; 
 }
 
 #screenshots {
 	margin-left: -100px;
 }
 
-* {
-	margin: 0;
-}
-html, body {
-	height: 100%;
-}
 .wrapper {
+	width: 700px;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -2em; /* the bottom margin is the negative value of the footer's height */
 }
 
-.footer, .push {
+.push {
 	height: 2em; /* .push must be the same height as .footer */
+}
+
+.footer {
+	height: 2em; /* .push must be the same height as .footer */
+}
+
+.footer hr {
+	margin-bottom: 0.5em;
+	width: 700px;
 }

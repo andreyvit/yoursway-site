@@ -12,7 +12,7 @@
     {% for post in object_list %}
     <div class="post {% cycle odd,even %}">
         <div class="post-date">{{ post.pub_date|time:"H:i" }}, {{ post.pub_date|date:"N d" }}</div>
-        <div class="post-name">{{ post.name }}</div>
+        <h3 class="post-name">{{ post.name }}</h3>
         <div class='post-text'>
         {{ post.text|linebreaksbr }}
         </div>
