@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block menu %}
+  {% with "Products" as activemenuitem %}
+  {% include "menu.html" %}
+  {% endwith %}
+{% endblock %}
+{% block title %}{{ flatpage.title }}{% endblock %}
+{% block headline %}{{ flatpage.title }}{% endblock %}
+{% block submenu %}
+<li><span class="selected">Overview</span></li>
+<li><a href="/downloads/">Download</a></li>
+<li><a href="http://git.yoursway.com/">Repository</a></li>
+<li><a href="http://dev.yoursway.com/">Bug tracker</a></li>
+{% endblock %}
+{% block text %}
+{{ flatpage.content }}
+{% endblock %}

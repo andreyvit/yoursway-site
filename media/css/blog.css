@@ -1,17 +1,18 @@
 .post {
-	background: url(../images/left.png) no-repeat;
-	background-position: top center;
+	margin-top: 10px;
 }
 
 .post-name {
 	color: #cc0000;
-	text-size: 12pt;
 	text-align: center;
+	font-weight: normal;
 }
 
 .post .post-date {
-	color: #cc0000;
+	color: #999999;
 	float: right;
+	font-family: arial;
+	font-size: 14px;
 }
 
 .post-text {

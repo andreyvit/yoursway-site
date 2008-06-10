@@ -7,7 +7,7 @@
 <body>
   <div class="wrapper">
     <div id="menu">
-    <img src="{{ MEDIA_URL }}images/logo2-small.gif"/>
+    <a href="/"><img src="{{ MEDIA_URL }}images/logo2-small.gif"/></a>
     {% block menu %}
     {% with "Consulting" as activemenuitem %}
     {% include "menu.html" %}
@@ -16,30 +16,32 @@
     <hr color="#f79c9f" size="1"/>
     </div>
     <div id="contents">
+    {% block content %}
         <div id="submenu">
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Download</a></li>
-            <li><a href="#">Repository</a></li>
-            <li><a href="#">Bug tracker</a></li>
+            {% block submenu %}
+            {% endblock %}
         </div>
         <h2>{% block headline %}{% endblock %}</h2>
         <div id="text">
-        {% block content %}
+        {% block text %}
         <p>
           Test paragraph
         </p> 
         {% endblock %}
         </div>
+    {% endblock %}
     </div>
     <div style="clear: both"></div>
     <div class="screenshots">
     {% block screenshots %}
     {% endblock %}
     </div>
-    <div class="push"></div>
+    <div class="push">
+    </div>
   </div>
   <div align="center" class="footer">
-  &copy; 2008 YourSway LLC
+    <hr color="#f79c9f" size="1"/>
+    &copy; 2008 YourSway LLC
   </div>
 </body>
 </html>

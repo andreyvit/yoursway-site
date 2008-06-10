@@ -19,7 +19,7 @@ body {
 }
 
 #menu a, #menu span, #menu img {
-	color: #cc6666;
+	color: #555555;
 	padding: 0 15px;
 	vertical-align: middle;
 	text-decoration: none;
@@ -38,12 +38,16 @@ img {
 
 #submenu {
 	float: left;
-	width: 100px;
+	width: 120px;
 }
 
 #submenu li {
 	list-style: none;
 	height: 2em;
+}
+
+#submenu span.selected {
+	color: #cc0000;
 }
 
 #submenu a {
@@ -59,20 +63,22 @@ h2 {
 }
 
 #text {
-	margin-left: 100px;
-	background: lightgreen;
+	margin-left: 120px;
 }
 
 #contents {
 	/*max-width: 800px;
 	margin: 0px 100px;*/
 	width: 35em;
-	max-width: 800px;
+	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 	
-	font-size: 12pt;
-	
+	font-size: 100%;
+}
+
+#contents li, #contents p {
+	margin: 0.5em 0; 
 }
 
 #screenshots {
@@ -80,13 +86,22 @@ h2 {
 }
 
 .wrapper {
-	width: 1000px;
+	width: 700px;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -2em; /* the bottom margin is the negative value of the footer's height */
 }
 
-.footer, .push {
+.push {
 	height: 2em; /* .push must be the same height as .footer */
+}
+
+.footer {
+	height: 2em; /* .push must be the same height as .footer */
+}
+
+.footer hr {
+	margin-bottom: 0.5em;
+	width: 700px;
 }
