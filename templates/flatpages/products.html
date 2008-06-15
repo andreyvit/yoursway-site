@@ -7,11 +7,10 @@
 {% block title %}{{ flatpage.title }}{% endblock %}
 {% block headline %}{{ flatpage.title }}{% endblock %}
 {% block submenu %}
-<li><span class="selected">Overview</span></li>
-<li><a href="/downloads/">Download</a></li>
-<li><a href="http://git.yoursway.com/">Repository</a></li>
-<li><a href="http://dev.yoursway.com/">Bug tracker</a></li>
+{% with "Products" as activesubitem %}
+{% include "submenu.html" %}
+{% endwith %}
 {% endblock %}
 {% block text %}
-{{ flatpage.content }}
+{{ flatpage.content|linebreaksbr }}
 {% endblock %}

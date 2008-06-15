@@ -1,0 +1,12 @@
+{% ifequal activesubitem "Products" %}
+<li><span class="selected">Overview</span></li>{% else %}
+<li><a href="/products/">Overview</a></li>
+{% endifequal %}
+{% ifequal activesubitem "Downloads" %}
+<li><span class="selected">Download</span></li>{% else %}
+<li><a href="/downloads/">Download</a></li>
+{% endifequal %}
+<li><a href="http://git.yoursway.com/">Repositories</a></li>
+<li style="margin-bottom: 25px;"><a href="http://yoursway.com/sadr/">SADR<br/>Bug tracker</a></li>
+<li><a href="http://yoursway.com/ide/">Python IDE<br/>Bug tracker</a></li>
+
