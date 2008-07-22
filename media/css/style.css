@@ -2,8 +2,20 @@
 	margin: 0;
 }
 
+
+a {
+    color: #463C3C;
+}
+a:hover {
+    color: #000000;
+}
+
 html, body {
-	height: 100%;
+    height: 100%;
+}
+
+div, span {
+    font-family: 'ArialMT','Arial',sans-serif;
 }
 
 body {
@@ -20,7 +32,7 @@ body {
 
 #menu a, #menu span, #menu img {
 	color: #555555;
-	padding: 0 15px;
+	padding: 0 10px;
 	vertical-align: middle;
 	text-decoration: none;
 }
