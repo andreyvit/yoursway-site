@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Corchy</title>
+{% endblock %}
+
+{% block menu %}
+{% with "Corchy" as activemenuitem %}
+{% include "menu.html" %}
+{% endwith %}
+{% endblock %}
+
+{% block contents %}
+					
+						<div style="height: 20px;">&nbsp;</div>
+					
+						<div>
+							<h1 style="margin-bottom: 0px;">Corchy</h1>
+							<h3><b>To-do lists in sync with Basecamp and your bug trackers</b></h3>
+							<img style="position: absolute; top: 50px; left: 600px;" src="/media/images/ys-logo.png">
+						</div>
+						
+						<div style="height: 20px;">&nbsp;</div>
+						
+						<p>This project is on a <b>very early stage</b> of development. 
+							We’re sharing a downloadable binary and a screencast to 
+							demonstrate the overall idea. Please try it and <a href="mailto:corchy-feedback@yoursway.com">share your opinion</a>.
+							
+						<p>If you would be interested to get the source code and hack on 
+							it, please <a href="mailto:corchy-hack@yoursway.com">contact us</a>. (We’re not yet sure if we want this to be an 
+							open-source, free or commercial tool)
+						
+						<div style="text-align: right; margin-top: 30px;">
+							<img src="/media/images-corchy/toxic.png" style="position: relative; top: -10px; left: 360px;">
+							<a href="#"><img src="/media/images-corchy/discussion.png"></a>														
+							<a href="#"><img src="/media/images-corchy/download.png"></a>						
+						</div>
+						
+						<div>
+							<img src="/media/images-corchy/corchy-promo.png">
+						</div>
+						
+						<div style="height: 50px;">&nbsp;</div>
+						
+						<div style="padding-left: 30px;">
+						<p><b>Dead simple</b>:  “Project:”, “- task”, “@tag”
+						<p><b>Syncs</b> with Basecamp (and, in the future, many other bug trackers / web apps)
+						<p><b>Version control-friendly</b>:  keeps To-Dos in a plain text file
+						<p><b>Tagging</b>:  associate arbitrary metadata with your tasks
+						</div>
+						
+						<div style="height: 50px;">&nbsp;</div>
+						
+{% endblock %}

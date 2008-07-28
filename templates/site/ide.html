@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}
+<title>IDE</title>
+{% endblock %}
+
+{% block menu %}
+{% with "IDE" as activemenuitem %}
+{% include "menu.html" %}
+{% endwith %}
+{% endblock %}
+
+{% block contents %}
+						<div style="height: 20px;">&nbsp;</div>
+					
+						<div>
+							<h1 style="margin-bottom: 0px;">YourSway IDE</h1>
+							<h3><b>Focus + Magic = Productivity</b></h3>
+							<img style="position: absolute; top: 50px; left: 600px;" src="/media/images/ys-logo.png">
+						</div>
+						
+						<div style="height: 20px;">&nbsp;</div>
+						
+						<div>
+							<img style="width: 630px;" src="/media/images-ide/ide-promo.png">
+							<div style="position: absolute; top: 400px; left: 300px;">
+								<iframe scrolling="no" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" src="/media/google-groups-ide.html"></iframe>
+							</div>
+						</div>
+						
+						<div style="height: 20px;">&nbsp;</div>
+						
+						<table class="layouting" style="width: 100%; line-height: 1.8em;">
+							<tr>
+								<td style="text-align: center;"><b>Focus</b></td>
+								<td>&nbsp;</td>
+								<td style="text-align: center;"><b>Magic</b></td>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr style="text-align: center; vertical-align: middle;">
+								<td style="vertical-align: middle;">									
+									Modeless UI<br>
+									Persistent undo<br>
+									Saveless editing<br>
+									Habit-forming<br>
+									Your work is sacred<br>
+								</td>
+								<td style="vertical-align: middle;"><b>+</b></td>
+								<td style="vertical-align: middle;">
+									Global refactorings<br>
+									Code assistance<br>
+									Static checking<br>
+									Continuous testing<br>
+								</td>
+								<td style="vertical-align: middle;"><b>=</b></td>
+								<td style="vertical-align: middle;"><b>Productivity</b></td>
+							</tr>
+						</table>
+						
+						<div style="height: 50px;">&nbsp;</div>
+						
+						<!-- actual document END -->
+						
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}
+<title>SADR</title>
+{% endblock %}
+
+{% block menu %}
+{% with "SADR" as activemenuitem %}
+{% include "menu.html" %}
+{% endwith %}
+{% endblock %}
+
+{% block contents %}
+		<div style="height: 20px;">&nbsp;</div>
+
+<div>
+	<h1 style="margin-bottom: 0px;">Static Analysis Done Right</h1>
+	<div style="color: white; background-color: black; line-height: 25px; width: 165px; font-weight: bold; padding-left: 10px;">the alien technology</div>
+	<img style="position: absolute; top: 50px; left: 600px;" src="/media/images/ys-logo.png">
+</div>
+
+<div style="height: 30px;">&nbsp;</div>
+
+<div style="height: 160px; width: 400px; display: block;">
+	<p style="font-size: 25px; line-height: 25px;">Powerful static analysis done in weeks
+	will be a reality. Soon.
+	<p>And the reality will be open-source.
+		
+	<a href="#"><img src="/media/images-sadr/tutorial.png" style="position: absolute; top: 140px; left: 450px;"></a>
+	<a href="#"><img src="/media/images-sadr/download.png" style="position: absolute; top: 180px; left: 450px;"></a>
+	<a href="#"><img src="/media/images-sadr/wiki.png" style="position: absolute; top: 220px; left: 450px;">	</a>
+	
+</div>
+
+<div>
+	<p>SADR is designed from ground up to power our own multi-language IDE and to adhere to our high quality standards.
+	<p>We're currently working on a <b>building  blocks</b> support. SADR will allow you to <b>reuse</b> existing parts of the analysis implementations by composing your engine as a set of building blocks. You <b>won't ever reimplement</b> local variables or function closures again.
+</div>
+
+<div style="height: 30px;">&nbsp;</div>
+
+<div style="text-align: right;">
+	<p>Want us to develop your IDE? &nbsp;&nbsp;&nbsp;&nbsp;
+	<img style="position: relative; top: 15px; " src="/media/images-sadr/yeswedoconsulting.png">
+</div>
+
+<div style="height: 50px;">&nbsp;</div>
+
+				
+{% endblock %}

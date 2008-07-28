@@ -1,6 +1,14 @@
-{% for item in global_menu %}
-{% ifequal item.name activemenuitem %}
-<span class="selected">{{ item.name }}</span>{% else %}
-<a href="{{ item.url }}">{{ item.name }}</a>
-{% endifequal %}
-{% endfor %}
+<div id="top_menu" class="hlinelike">					
+	<ul id="top_menu_list">
+		{% for item in global_menu %}
+		{% ifequal item.name activemenuitem %}
+		<li class="current-page">
+			<a href="">{{ item.name }} </a>
+		</li>{% else %}
+		<li class="noncurrent-page">
+			<a href="{{ item.url }}">{{ item.name }} </a>
+		</li>
+		{% endifequal %}
+		{% endfor %}
+	</ul>			
+</div>

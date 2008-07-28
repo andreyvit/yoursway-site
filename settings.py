@@ -1,5 +1,5 @@
 # Django settings for yoursway project.
-import deseb
+# import deseb
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -47,7 +47,7 @@ MEDIA_ROOT = ROOT_DIR + '/media/'
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 import socket
 host = socket.gethostname()
-if host == 'yoursway.com':
+if host != 'bur':
     MEDIA_URL = '/media/'
 else:
     MEDIA_URL = 'http://localhost/yoursway/media/'
@@ -72,7 +72,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'urls'
@@ -100,7 +99,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'django.contrib.flatpages',
+#   'django.contrib.flatpages',
     'apps.blog',
     'apps.menu',
 )

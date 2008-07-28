@@ -1,46 +1,42 @@
 <html>
-<head><title>{% block title %}{% endblock %}</title>
-{% block head %}
-<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css" />
-{% endblock %}
-</head>
-<body>
-  <div class="wrapper">
-    <div id="menu">
-    {% block menu %}
-    {% with "Consulting" as activemenuitem %}
-    {% include "menu.html" %}
-    {% endwith %}
-    {% endblock %}
-    <hr color="#f79c9f" size="1"/>
-    </div>
-    <div id="contents">
-    {% block content %}
-        <div id="submenu">
-            {% block submenu %}
-            {% endblock %}
-        </div>
-        <h2>{% block headline %}{% endblock %}</h2>
-        <div id="text">
-        {% block text %}
-        <p>
-          Test paragraph
-        </p> 
-        {% endblock %}
-        </div>
-    {% endblock %}
-    </div>
-    <div style="clear: both"></div>
-    <div class="screenshots">
-    {% block screenshots %}
-    {% endblock %}
-    </div>
-    <div class="push">
-    </div>
-  </div>
-  <div align="center" class="footer">
-    <hr color="#f79c9f" size="1"/>
-    &copy; 2008 YourSway LLC
-  </div>
-</body>
+	<head>		
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>			
+		<link rel="stylesheet" type="text/css" /media="screen,print" href="/media/style.css" />
+		<!-- page specific START -->
+		{% block title %}
+		{% endblock %}
+		<!-- page specific END -->
+	</head>
+	<body>
+		<div id="wrapper_div">
+			<div id="wrapper_div2">				
+				<div id="content">
+					<!-- menu block START -->
+			    {% block menu %}
+			    {% with "YourSway" as activemenuitem %}
+			    {% include "menu.html" %}
+			    {% endwith %}
+			    {% endblock %}
+					<!-- menu block END -->
+					<div id="hline1">
+						<img style="height: 1px; width: 630px;" alt="" src="/media/images/shapeimage_1.jpg"/>
+					</div>
+					<div id="body">
+						
+						<!-- actual document START -->
+						{% block contents %}
+						{% endblock %}
+						<!-- actual document END -->
+						
+					</div>	
+						<div id="hline2">
+							<img style="height: 1px; width: 630px;" alt="" src="/media/images/shapeimage_1.jpg"/>
+						</div>
+						<div id="footer" class="hlinelike">
+							 &copy; 2008 YourSway LLC
+						</div>
+				</div>				
+			</div>
+		</div>
+	</body>	
 </html>

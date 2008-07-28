@@ -1,0 +1,46 @@
+<html>
+<head><title>{% block title %}{% endblock %}</title>
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style.css" />
+{% endblock %}
+</head>
+<body>
+  <div class="wrapper">
+    <div id="menu">
+    {% block menu %}
+    {% with "Consulting" as activemenuitem %}
+    {% include "menu.html" %}
+    {% endwith %}
+    {% endblock %}
+    <hr color="#f79c9f" size="1"/>
+    </div>
+    <div id="contents">
+    {% block content %}
+        <div id="submenu">
+            {% block submenu %}
+            {% endblock %}
+        </div>
+        <h2>{% block headline %}{% endblock %}</h2>
+        <div id="text">
+        {% block text %}
+        <p>
+          Test paragraph
+        </p> 
+        {% endblock %}
+        </div>
+    {% endblock %}
+    </div>
+    <div style="clear: both"></div>
+    <div class="screenshots">
+    {% block screenshots %}
+    {% endblock %}
+    </div>
+    <div class="push">
+    </div>
+  </div>
+  <div align="center" class="footer">
+    <hr color="#f79c9f" size="1"/>
+    &copy; 2008 YourSway LLC
+  </div>
+</body>
+</html>
