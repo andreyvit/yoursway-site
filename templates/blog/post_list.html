@@ -1,21 +1,70 @@
 {% extends "base.html" %}
-{% block head %}
-{{ block.super }}
-<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/blog.css" />
+
+{% block title %}
+<title>Blog</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="/media/style_blog.css" />
 {% endblock %}
+
 {% block menu %}
-    {% with "Blog" as activemenuitem %}
-    {% include "menu.html" %}
-    {% endwith %}
+{% with "Blog" as activemenuitem %}
+{% include "menu.html" %}
+{% endwith %}
 {% endblock %}
-{% block content %}
+
+
+{% block contents %}
+
+<div style="height: 20px;">&nbsp;</div>
+
+<div>
+	<h1>YourSway Blog</h1>							
+	<img style="position: absolute; top: 35px; left: 600px;" src="/media/images/ys-logo.png">
+</div>
+
+
+<div style="height: 20px;">&nbsp;</div>
+
+
+<div style="width: 130px; position: absolute; left: 500px;">
+	<div class="blog_side_header">Archive</div>
+	<p>2008</p>
+		<div style="text-indent: 1em; font-size: 14px; color: #463C3C;">
+			<div style="">July</div>
+				<div style="text-indent: 2em"><a href="">Building blocks emerging</a></div>
+			<div style="">June</div>
+		<div style="">May</div>
+		</div>
+		
+	<div style="height: 20px;">&nbsp;</div>	
+	<div class="blog_side_header">Tags</div>
+	<div style="text-indent: 1em">
+		<p>teens
+		<p>anal
+		<p>asian
+		<p>lesbo
+	</div>
+</div>
+
+<div style="width: 450px;">
+
     {% for post in object_list %}
     <div class="post {% cycle odd,even %}">
-        <div class="post-date">{{ post.pub_date|time:"H:i" }}, {{ post.pub_date|date:"N d" }}</div>
-        <h3 class="post-name">{{ post.name }}</h3>
+	
+				<div class="post-date">{{ post.pub_date|date:"D, N d, Y" }}</div>
+        
+        <h2 class="post-name">{{ post.name }}</h2>
+
+	
         <div class='post-text'>
-        {{ post.text|linebreaksbr }}
+        <p>{{ post.text|linebreaksbr }}
         </div>
+
+				<div class="post-footer">Posted by Andrey Tarantsov @ {{ post.pub_date|time:"H:i" }}, 0 comments (+1), link to this post, digg it</div>
+				
+				<div style="height: 1px; background-color: #BBB; margin-bottom: 2em;"></div>
+					
     </div>
     {% endfor %}
+
+</div>
 {% endblock %}
