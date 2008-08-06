@@ -12,6 +12,9 @@ def pages(request, url):
     url = url.rstrip('/')
     return render_to_response('site/%s.html' % url, RequestContext(request))
 
+def subpages(request, url1, url2):
+    return render_to_response('site/%s/%s.html' % (url1, url2), RequestContext(request))
+
 urlpatterns = patterns('',
     # Example:
     # (r'^yoursway/', include('yoursway.foo.urls')),
@@ -20,11 +23,12 @@ urlpatterns = patterns('',
       (r'^admin/(.*)$', admin.site.root),
       (r'^$', index),
       (r'^([^/]*)/?$', pages),
+      (r'^([^/]*)/([^/]*)/?$', subpages),
 )
 
 admin.autodiscover()
 
 if settings.DEBUG:    
-    urlpatterns += patterns('',
+    urlpatterns = patterns('',
     (r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-)
+) + urlpatterns

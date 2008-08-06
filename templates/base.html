@@ -2,41 +2,39 @@
 	<head>		
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>			
 		<link rel="stylesheet" type="text/css" /media="screen,print" href="/media/style.css" />
-		<!-- page specific START -->
-		{% block title %}
-		{% endblock %}
-		<!-- page specific END -->
+		<title>{% block title %}(no title!!!!){% endblock %}</title>
 	</head>
 	<body>
-		<div id="wrapper_div">
-			<div id="wrapper_div2">				
-				<div id="content">
-					<!-- menu block START -->
-			    {% block menu %}
-			    {% with "YourSway" as activemenuitem %}
-			    {% include "menu.html" %}
-			    {% endwith %}
-			    {% endblock %}
-					<!-- menu block END -->
-					<div id="hline1">
-						<img style="height: 1px; width: 630px;" alt="" src="/media/images/shapeimage_1.jpg"/>
-					</div>
-					<div id="body">
-						
-						<!-- actual document START -->
-						{% block contents %}
-						{% endblock %}
-						<!-- actual document END -->
-						
-					</div>	
-						<div id="hline2">
-							<img style="height: 1px; width: 630px;" alt="" src="/media/images/shapeimage_1.jpg"/>
-						</div>
-						<div id="footer" class="hlinelike">
-							 &copy; 2008 YourSway LLC
-						</div>
-				</div>				
-			</div>
+	  <div id="main_menu">
+    	<ul>
+    		{% for item in global_menu %}
+      		{% ifequal item.name active_global_item %}
+        		<li class="active"><a href=""><img src="/media/images/{{ item.icon }}" width="192" height="192" alt="{{ item.alt }}" /></a>
+      		{% else %}
+        		<li class="inactive"><a href="{{ item.full_url }}"><img src="/media/images/{{ item.icon }}" width="96" height="96" alt="{{ item.alt }}" /></a>
+      		{% endifequal %}
+    		{% endfor %}
+    	</ul>			
+    </div>
+    {% block midstrip %}{% endblock %}
+    
+    {% ifnotequal len(content_menu) 0 %}
+      <ul id="content_menu">
+    		{% for item in content_menu %}
+      		{% ifequal item.name active_content_item %}
+        		<li class="active">{{ item.text }}</li>
+      		{% else %}
+        		<li class="inactive"><a href="{{ item.full_url }}">{{ item.text }}</a></li>
+      		{% endifequal %}
+    		{% endfor %}
+      </ul>
+    {% endifnotequal %}
+    
+    <div id="content">
+      {% block contents %}{% endblock %}
+    </div>
+		<div id="footer">
+			 &copy; 2008 YourSway LLC
 		</div>
 	</body>	
 </html>

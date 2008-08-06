@@ -1,6 +1,222 @@
+/* @override http://localhost:8000/media/style.css */
+
 * {
 	margin: 0px;
 }
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana;
+	font-size: 12pt;
+	line-height: 1.4em;
+}
+
+/* vertical -------------------------------- */
+
+body {
+	padding-top: 0.33cm;
+}
+
+#main_menu {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#main_menu ul li.inactive a img {
+	margin-bottom: 34px;
+}
+
+#midstrip {
+	margin-top: 0.33cm;
+	margin-bottom: 0.66cm;
+	padding-top: 0.66cm;
+	padding-bottom: 0.33cm;
+}
+
+ul#content_menu {
+	margin-top: 1.3cm;
+	margin-bottom: 0.7cm;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#content {
+		
+}
+
+#footer {
+	
+}
+
+/* main menu horizontal positioning -------------------------------- */
+
+#main_menu {
+	text-align: center;
+}
+
+#main_menu li {
+	margin-left: 0.33cm;
+	margin-right: 0.33cm;
+}
+
+
+/* main menu appearance -------------------------------- */
+
+#main_menu {
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+	line-height:30px;
+}
+
+#main_menu ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#main_menu li {
+	list-style-type: none;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	display: inline;
+}
+
+#main_menu li a {
+	text-decoration: none;
+	color: #666;
+}
+
+#main_menu li a:visited {
+	text-decoration: none;
+	color: #666;
+}
+
+#main_menu li a:hover {
+	text-decoration: none;
+	color: #463C3C;
+}
+#main_menu li.active a{
+	text-decoration: none;
+	color: #463C3C;
+	font-weight: bold;
+}
+
+/* midstrip horizontal -------------------------------- */
+
+#midstrip {
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+#midstrip #midpitch {
+	float: left;
+	width: 10cm;
+}
+
+#midstrip #midactions {
+	float: right;
+	width: 45%;
+	max-width: 20cm;
+}
+
+/* midstrip appearance -------------------------------- */
+
+#midstrip {
+	background-color: #eee;
+}
+
+#midstrip p {
+	font-size: 13pt;
+	line-height: 18pt;
+}
+
+#midstrip p.mainpitch {
+	font-size: 22pt;
+	line-height: 30pt;
+}
+
+#midstrip p.maindownload {
+	padding-top: 0.4cm;
+}
+
+#midstrip img.downloadicon {
+	float: left;
+	margin-right: 0.5cm;
+}
+
+#midstrip p.subdownload {
+	font-size: 11pt;
+}
+
+/* content menu horizontal -------------------------------- */
+
+ul#content_menu {
+	margin-left: 9%;
+	margin-right: 9%;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#content_menu li {
+	padding-right: 1em;	
+}
+
+/* content menu appearance -------------------------------- */
+
+ul#content_menu {
+	list-style: none;
+	font-size: 16pt;
+}
+
+#content_menu li {
+	list-style-type: none;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	display: inline;
+}
+
+#content_menu li, #content_menu li a, #content_menu li a:visited, #content_menu li a:hover {
+	color: blue;
+}
+
+#content_menu li.active {
+	font-weight: bold;
+}
+
+#content_menu li a {
+	text-decoration: none;
+}
+
+#content_menu li a:visited {
+	text-decoration: none;
+}
+
+#content_menu li a:hover {
+	text-decoration: underline;
+}
+
+/* content horizontal -------------------------------- */
+
+#content {
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+/* content appearance -------------------------------- */
+
+#content {
+	
+}
+
+/* everything else -------------------------------- */
+
+.floattrailer {
+	clear:  both;
+}
+
 a {
     color: #463c3c;
     text-decoration: underline;
@@ -20,67 +236,6 @@ a:hover {
 	height: 2em;
 	font-size: 13px;
 	
-}
-#wrapper_div {
-	text-align: center;	
-	font-family: ArialMT, Arial, sans-serif;	
-}
-#wrapper_div2 {
-	width: 700px;	
-	text-align: center;	
-	position: relative;
-	margin: 0px auto;
-}
-div#body {
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	max-width: 630px;
-	position: relative;
-	left: 35px;
-	text-align: left;
-}
-/*div#content {
-	height: 100px;	
-	margin: 0px auto -2em;
-}*/
-div#top_menu {
-	font-family:Arial,sans-serif;
-	font-size:1em;
-	line-height:30px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-#top_menu_list li {
-	list-style-type: none;
-	list-style-image: none;
-	list-style-position: outside;
-	list-style-type: none;
-	display: inline;
-	padding: 0px 10px 0px 10px;
-}
-#top_menu_list ul {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-}
-#top_menu_list li a {
-	text-decoration: none;
-	color: #666;
-}
-
-#top_menu_list li a:visited {
-	text-decoration: none;
-	color: #666;
-}
-
-#top_menu_list li a:hover {
-	text-decoration: none;
-	color: #463C3C;
-}
-#top_menu_list li.current-page a{
-	text-decoration: none;
-	color: #463C3C;
-	font-weight: bold;
 }
 div { 
     overflow: visible; 
