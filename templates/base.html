@@ -18,7 +18,7 @@
     </div>
     {% block midstrip %}{% endblock %}
     
-    {% ifnotequal len(content_menu) 0 %}
+    {% ifnotequal content_menu|length 0 %}
       <ul id="content_menu">
     		{% for item in content_menu %}
       		{% ifequal item.name active_content_item %}

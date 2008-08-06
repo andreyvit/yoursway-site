@@ -32,7 +32,7 @@ def find_active_item(path, items):
     best_fit = None
     for item in items:
         if path == item.url.rstrip('/') or path.startswith(item.url):
-            if best_fit == None or len(item.url) > len(best_fit.url):
+            if best_fit is None or len(item.url) > len(best_fit.url):
                 best_fit = item
     return best_fit or dummymenuitem()
     
@@ -46,7 +46,7 @@ def menu(request):
         globalmenuitem(name = 'aboutus', url = 'aboutus/', icon = 'icon-aboutus.png',  alt = 'About Us'),
     ]
     
-    path = request.path.lstrip('/')
+    path = request.META['PATH_INFO'].lstrip('/')
     
     active_global_item = find_active_item(path, global_menu)
     path = path[len(active_global_item.url) : -1]
