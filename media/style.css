@@ -46,7 +46,9 @@ ul#content_menu {
 }
 
 #footer {
-	
+	clear: both;
+	padding-top: 4em;
+	padding-bottom: 1em;
 }
 
 /* main menu horizontal positioning -------------------------------- */
@@ -211,6 +213,14 @@ ul#content_menu {
 	
 }
 
+/* footer appearance -------------------------------- */
+
+#footer {
+	font-size: 9pt;
+	text-align: center;
+}
+
+
 /* everything else -------------------------------- */
 
 .floattrailer {
@@ -231,11 +241,6 @@ a:hover {
 }
 .hlinelike {
 	text-align: center;
-}
-#footer {
-	height: 2em;
-	font-size: 13px;
-	
 }
 div { 
     overflow: visible; 
