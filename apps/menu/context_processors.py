@@ -53,8 +53,8 @@ def menu(request):
     
     if active_global_item.name == 'corchy':
         content_menu = [
-            contentmenuitem(parent = active_global_item, name = '', url = '', text = 'Overview'),
-            contentmenuitem(parent = active_global_item, name = 'tutorial', url = 'tutorial/', text = 'Tutorial'),
+            contentmenuitem(parent = active_global_item, name = '', url = '', text = "Why you'll love Corchy"),
+            contentmenuitem(parent = active_global_item, name = 'screencast', url = 'screencast/', text = 'Screencast'),
             contentmenuitem(parent = active_global_item, name = 'faq', url = 'faq/', text = 'FAQ'),
             contentmenuitem(parent = active_global_item, name = 'community', url = 'community/', text = 'Community & Feedback'),
         ]
