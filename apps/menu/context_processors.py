@@ -41,7 +41,7 @@ def menu(request):
     global_menu = [
         globalmenuitem(name = 'home',    url = '',         icon = 'icon-yoursway.png', alt = 'Home'),
         globalmenuitem(name = 'ide',     url = 'ide/', active = False, icon = 'icon-ide.png',      alt = 'YourSway IDE'),
-        globalmenuitem(name = 'corchy',  url = 'corchy/',  icon = 'icon-corchy.png',   alt = 'Corchy'),
+        globalmenuitem(name = 'taskus',  url = 'taskus/',  icon = 'icon-taskus.png',   alt = 'Taskus'),
         globalmenuitem(name = 'free', url = 'free/', icon = 'icon-free.png',  alt = 'Free Tools'),
         globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'About Us'),
         globalmenuitem(name = 'aboutus', url = 'aboutus/', icon = 'icon-aboutus.png',  alt = 'About Us'),
@@ -52,12 +52,12 @@ def menu(request):
     active_global_item = find_active_item(path, global_menu)
     path = path[len(active_global_item.url) : -1]
     
-    if active_global_item.name == 'corchy':
+    if active_global_item.name == 'taskus':
         content_menu = [
-            contentmenuitem(parent = active_global_item, name = '', url = '', text = "Why you'll love Corchy"),
+            contentmenuitem(parent = active_global_item, name = '', url = '', text = "5 easy rules"),
             contentmenuitem(parent = active_global_item, name = 'screencast', url = 'screencast/', text = 'Screencast'),
-            contentmenuitem(parent = active_global_item, name = 'faq', url = 'faq/', text = 'FAQ'),
-            contentmenuitem(parent = active_global_item, name = 'community', url = 'community/', text = 'Community & Feedback'),
+            contentmenuitem(parent = active_global_item, name = 'qa', url = 'qa/', text = 'Productivity Q&A'),
+            contentmenuitem(parent = active_global_item, name = 'support', url = 'support/', text = 'Support'),
         ]
     else:
         content_menu = []

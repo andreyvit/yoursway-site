@@ -1,0 +1,54 @@
+{% extends "layout-taskus.html" %}
+{% block title %}All your tasks in one place — YourSway Taskus{% endblock %}
+
+{% block midstrip %}
+<div id="midstrip">
+  <div id="midpitch">
+    <p class="mainpitch">All your tasks in one place.</p>
+    <p class="subpitch">Imagine keeping your personal and work tasks<br>in a single plain text file.</p>
+    <div class="download" style="padding-left: 1cm; margin-top: 0.66cm;">
+      <p><a href="#"><img class="downloadicon" src="/media/images/download.png" width="85" height="84" alt="" /></a></p>
+      <p class="maindownload">Download <a href="#">Taskus v2 for Mac</a></p>
+      <p class="subdownload">also <a href="#">for Windows</a> or <a href="#">for Linux</a></p>
+      <p class="licensing">Free for any use. (And yes, we <a href="/consulting">do consulting</a>.)</p>
+    </div>
+    <div class="features">
+      <p class="feature">&bull; automatically <em>pull tasks</em> from bug trackers and Basecamp</p>
+      <p class="feature">&bull; edit, create, move, mark as done — and then <em>sync back</em></p>
+      <p class="feature">&bull; <em>nothing to learn</em>: you know text files, right?</p>
+    </div>
+    <div class="quotes">
+      <div class="quote wide">
+        <p>“My dream of working with Basecamp todos on a plane<br>
+          has come true. And I love making changes right away!”</p>
+        <p class="author">–Yury Baburov</p>
+      </div>
+    </div>
+    <p style="clear: both;"></p>
+  </div>
+  <div id="midactions" class="corchypic">
+    <img src="/media/images-corchy/corchy.png" width="391" height="327" alt="Corchy" style="margin-right: 0.66cm; margin-bottom: 0.33cm;"></p>
+  </div>
+  <div class="floattrailer"></div>
+</div>
+{% endblock %}
+
+{% block contents %}
+
+  <h3>1. Type anything.</h3>
+  <p>Taskus will save whatever text you type in. You can enter your ideas, tasks and drafts, and Taskus will instantly save every precious letter you add.</p>
+  
+  <h3>2. “Project:” and “- task”.</h3>
+  <p>Use these two very simple conventions, and Taskus will recognize your projects and individual tasks.</p>
+  
+  <h3>3. You can add “@tags” or even “@tags(with additional info)”.</h3>
+  <p>Taskus will autocomplete the tags you type, so tagging is very easy and fast.</p>
+  <p>Specify a context for your tasks, like @phone, @shop, @work or @computer. Choose the tasks you will do @today. Designate @urgent tasks, or mark tasks @due(tomorrow). Specify that you've @spent(2h) on something.</p>
+
+  <h3>4. Tag done tasks with “@done”.</h3>
+  <p>Just hit Command-D (or Control-D on Windows) to add or remove @done.</p>
+  
+  <h3>5. Synchronize with Basecamp. <span style="font-weight: normal;">(Trac, Lighthouse and more to come.)</h3>
+  <p>Add the following magic line below your project header, and the tasks from Basecamp will be added to the project automatically: <i>“Sync with http://youraccount.seework.com/, project ‘My Task’, user ‘andreyvit’, todo list ‘Things to do’”</i>. To publish your newly created tasks to Basecamp, tag them with @basecamp.
+
+{% endblock %}
