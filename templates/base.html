@@ -12,7 +12,7 @@
       		{% ifequal item.name active_global_item %}
         		<li class="active"><a href=""><img src="/media/images/{{ item.icon }}" width="192" height="192" alt="{{ item.alt }}" /></a>
       		{% else %}
-        		<li class="inactive"><a href="{{ item.full_url }}"><img src="/media/images/{{ item.icon }}" width="96" height="96" alt="{{ item.alt }}" /></a>
+        		<li class="inactive">{% if item.active %}<a href="{{ item.full_url }}">{% endif %}<img src="/media/images/{{ item.icon }}" width="96" height="96" alt="{{ item.alt }}" />{% if item.active %}</a>{% endif %}
       		{% endifequal %}
     		{% endfor %}
     	</ul>			

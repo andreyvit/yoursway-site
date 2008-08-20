@@ -1,10 +1,11 @@
 from apps.menu.models import Menu
 
 class menuitem:
-    def __init__(self, parent, name, url):
+    def __init__(self, parent, name, url, active = True):
         self.name = name
         self.url = url
         self.parent = parent
+        self.active = active
         self.full_url = self.compute_full_url()
     
     def compute_full_url(self):
@@ -18,8 +19,8 @@ class dummymenuitem(menuitem):
         menuitem.__init__(self, None, name = 'none', url = '')
 
 class globalmenuitem(menuitem):
-    def __init__(self, name, url, icon, alt):
-        menuitem.__init__(self, parent = None, name = name, url = url)
+    def __init__(self, name, url, icon, alt, active = True):
+        menuitem.__init__(self, parent = None, name = name, url = url, active = active)
         self.icon = icon
         self.alt = alt
 
@@ -39,7 +40,7 @@ def find_active_item(path, items):
 def menu(request):
     global_menu = [
         globalmenuitem(name = 'home',    url = '',         icon = 'icon-yoursway.png', alt = 'Home'),
-        globalmenuitem(name = 'ide',     url = 'ide/'   ,  icon = 'icon-ide.png',      alt = 'YourSway IDE'),
+        globalmenuitem(name = 'ide',     url = 'ide/', active = False, icon = 'icon-ide.png',      alt = 'YourSway IDE'),
         globalmenuitem(name = 'corchy',  url = 'corchy/',  icon = 'icon-corchy.png',   alt = 'Corchy'),
         globalmenuitem(name = 'free', url = 'free/', icon = 'icon-free.png',  alt = 'Free Tools'),
         globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'About Us'),
