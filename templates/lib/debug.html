@@ -1,0 +1,21 @@
+<div id="debug-wrap">
+    {% if pygments_css %}
+    <style type="text/css">
+    {{ pygments_css }}
+    </style>
+    {% endif %}
+    <div>
+        <a href="#" onclick="document.getElementById('debug').style.display='block'">debug</a>
+        sql count: {{ query_count }}, sql time: {{ query_time }}
+    </div>
+    <div id="debug" style="display: none">
+    {% for query in queries %}
+    <div class="code">
+        <div>time: {{ query.time }}</div>
+        {% if not pygments_installed %}<pre>{% endif %}
+        {{ query.sql|safe|linebreaks }}
+        {% if not pygments_installed %}</pre>{% endif %}
+    </div>
+    {% endfor %}
+    </div>
+</div>

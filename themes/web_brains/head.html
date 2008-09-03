@@ -1,0 +1,57 @@
+{% load i18n %}
+
+<div class="title-strip">
+    <div class="left">
+        <h2 class="site-title"><a href="/">{{ settings.BLOG_NAME }}</a></h2>
+        <div class="site-description">{{ settings.TAGLINE }}</div>
+        <div class="clear"></div>
+    </div>
+    <div class="right">
+        <!--<form method="get" action="{% url search %}" id="search-form">-->
+            <!--<input type="text" name="query" class="query" value="искать..." onclick="clearSearchField(this)" />-->
+        <!--</form>-->
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="strip info-strip">
+    <div class="left">
+        <ul class="flat">
+            <li><a href="/about/">{% trans "About" %}</a></li>
+            <li><a href="http://trac.piranha.org.ua/" title="посмотреть код, динамику развития и оставить пожелания">Trac</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="right">
+        {% if user.is_authenticated %}
+        <ul class="flat">
+            <li><div class="account-info">{% trans "Hello," %} {{ user.name }}</div></li>
+            <li><a class="first" href="{% url profile_edit %}">{% trans "Profile" %}</a></li>
+            {% if user.is_staff %}<li><a href="/admin/">{% trans "Admin" %}</a>{% endif %}</li>
+            <li><a class="last" href="{% url logout %}">{% trans "Logout" %}</a></li>
+        </ul>
+        <div class="clear"></div>
+        {% else %}
+            <ul class="flat">
+                <li><a class="first last" href="{% url login %}" onclick="return showLoginForm();">login</a></li>
+            </ul>
+        {% endif %}
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="login-form">
+    <a href="#" onclick="return hideLoginForm();">close</a>
+    <p>{% trans "Login with password" %}</p>
+    <form action="{% url login %}" method="post">
+        <input type="text" id="email" name="email" />
+        <input type="password" id="password" name="password" />
+        <input type="submit" value="Login" />
+    </form>
+    <a href="{% url password_reset %}">{% trans "Forgot password?" %}</a>
+    <p>{% trans "Login with OpenID" %}</p>
+    <form action="{% url openid_signin %}" method="post">
+        <input type="text" id="openid_url" name="openid_url" />
+        <input type="submit" value="Login" />
+    </form>
+</div>
+{% block bar %}{% endblock %}

@@ -1,0 +1,5 @@
+<h1>{% if post_detail %}
+<a href="/{{ settings.BLOG_URLCONF_ROOT }}">{{ settings.BLOG_NAME }}</a>
+{% else %}
+{{ settings.BLOG_NAME }}
+{% endif %} ~ {{ settings.TAGLINE }}</h1>

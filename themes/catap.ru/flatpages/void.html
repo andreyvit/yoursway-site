@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+ <head>
+  <title>{% block title %}{{ flatpage.title }}{% endblock title%}</title>
+  <link rel="openid.server" href="{% absolute_url openid_endpoint %}" />
+  <link rel="openid.delegate" href="{% absolutize_url / %}" />
+  <link rel="openid2.local_id" href="{% absolutize_url / %}" />
+  <link rel="openid2.provider" href="{% absolute_url openid_endpoint %}" />
+  <link rel="alternate" type="application/atom+xml" title="{{ settings.BLOG_NAME }}: entries feed" href="{% url feed "blog" %}" />
+  <link rel="alternate" type="application/atom+xml" title="{{ settings.BLOG_NAME }}: comments feed" href="{% url feed "comments" %}" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="{{ THEME_STATIC_URL }}img/favicon.ico" />
+  <link rel="stylesheet" href="{{ THEME_STATIC_URL }}css/void.css" type="text/css" />
+ </head>
+ <body>
+  <div class="void">
+    <span>{% block content %}{{ flatpage.content }}{% endblock %}</span>
+  </div>
+  <div class="copyright">
+    <span>Copyright &copy; 2000—{% now "Y" %} <a href="mailto:catap@catap.ru">catap</a></span>
+
+  </div>
+  <div class="valid">
+    <span>W3C: valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.0</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></span>
+  </div>
+  <div class="home">
+    <a href="/{{ settings.BLOG_URLCONF_ROOT }}"><img src="{{ THEME_STATIC_URL }}img/home.gif" alt="catap's blog" style="border:0"/></a>
+  </div>
+ </body>
+</html>
+

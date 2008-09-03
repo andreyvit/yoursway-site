@@ -1,0 +1,5 @@
+<ul class="blogroll">
+{% for link in links %}
+    <li><a href="{{ link.url }}" rel="{{ link.relations }}">{{ link.name }}</a></li>
+{% endfor %}
+</ul>

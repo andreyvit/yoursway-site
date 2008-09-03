@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load i18n %}
+{% load sidebar %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{% block title %}python + django = веб-мозги: {% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="alternate" type="application/rss+xml" title="{{ settings.BLOG_NAME }}: blog entries feed" href="{% url rss_feed "blog" %}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ settings.BLOG_NAME }}: comments feed" href="{% url rss_feed "comments" %}" />
+    <link rel="stylesheet" type="text/css" href="{{ THEME_STATIC_URL }}css/style.css"/>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"/></script>
+    <script type="text/javascript" src="{{ THEME_STATIC_URL }}js/tools.js"/></script>
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+    <div id="head">
+        {% include "head.html" %}
+    </div>
+    <div id="body">
+        <div id="contentbar">
+            {% site_messages %}
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <div id="sidebar">
+            <div id="side">
+                {% sidebar %}
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div id="footer">
+        {% include "footer.html" %}
+    </div>
+{% if debug %}{% include "debug.html" %}{% endif %}
+</body>
+</html>

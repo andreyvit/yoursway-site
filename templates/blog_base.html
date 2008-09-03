@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load i18n %}
+{% load theme %}
+{% load tagging_tags %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>{{ settings.BLOG_NAME }}: {% block title %}main{% endblock %}</title>
+  {% theme_css %}
+  <link rel="alternate" type="application/atom+xml" title="{{ settings.BLOG_NAME }}: blog entries feed" href="{% url feed "blog" %}" />
+  <link rel="alternate" type="application/atom+xml" title="{{ settings.BLOG_NAME }}: comments feed" href="{% url feed "comments" %}" />
+  <link rel="openid2.provider" href="{% absolute_url openid_endpoint %}"/>
+  <link rel="openid.server" href="{% absolute_url openid_endpoint %}"/>
+  <link rel="stylesheet" type="text/css" /media="screen,print" href="/media/styles/style.css" />
+  {% theme_js "jquery" %}
+  {% theme_js "login-shortcuts" %}
+  <script type="text/javascript" src="{% url processed_js %}"></script>
+  {% block extrahead %}{% endblock %}
+</head>
+<body>
+	<div id="main_menu">
+    	<ul>
+    		{% for item in global_menu %}
+      		{% ifequal item.name active_global_item %}
+        		<li class="active"><a href=""><img src="/media/images/{{ item.icon }}" width="192" height="192" alt="{{ item.alt }}" /></a>
+      		{% else %}
+        		<li class="inactive">{% if item.active %}<a href="{{ item.full_url }}">{% endif %}<img src="/media/images/{{ item.icon }}" width="96" height="96" alt="{{ item.alt }}" />{% if item.active %}</a>{% endif %}
+      		{% endifequal %}
+    		{% endfor %}
+    	</ul>			
+    </div>
+
+  {% include "head.html" %}
+
+  <div id="bodyblock">
+    <div id="sidebar">
+    {% block sidebar %}
+		<div class="blog_side_header">Archive</div>
+			<div style="">&nbsp;&nbsp;&nbsp;&nbsp;2008</div>
+			<div style="text-indent: 1em; font-size: 14px; color: #463C3C;">
+				<div style="">&nbsp;&nbsp;May</div>
+					<div style="text-indent: 2em"><a href="">links</a></div>
+			</div>
+		
+		<div style="height: 20px;">&nbsp;</div>	
+		<div class="blog_side_header">Tags</div>
+		<div style="text-indent: 1em">
+			{% tag_cloud_for_model blog.post as tags %}
+			{% render_tag_cloud tags %}
+		</div>
+	{% endblock %}
+	</div>
+    <div id="content" class="content" >
+      {% site_messages %}
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+
+  {% include "footer.html" %}
+
+{% if debug %}{% include "debug.html" %}{% endif %}
+</body>
+</html>

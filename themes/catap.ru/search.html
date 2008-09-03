@@ -1,0 +1,16 @@
+{% load i18n %}
+
+<div class="block">
+  <p class="header">{% trans "Search" %}</p><!-- Google Search -->
+  <form id="searchform" method="get" action="http://www.google.com/search" >
+    <p><input id="searchtext" type="text" name="q" value="" /></p>
+    <p><input type="hidden" name="ie" value="utf-8" /></p>
+    <p><input type="hidden" name="oe" value="utf-8" /></p>
+    <p><input type="hidden" name="hl" value="ru" /></p>
+    
+    <p><input type="hidden" name="domains" value="catap.ru" /></p>
+    <p><input name="si" type="hidden" value="catap.ru" /></p>
+    
+    <p><input type="hidden" name="sitesearch" value="catap.ru" /></p>
+  </form>
+</div>

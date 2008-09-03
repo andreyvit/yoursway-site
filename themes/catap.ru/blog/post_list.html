@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load theme %}
+{% load tagging_tags %}
+
+{% block extrahead %}
+{% theme_css "highlight" %}
+{% theme_js "highlight" %}
+<script type="text/javascript">initHighlightingOnLoad('html', 'css', 'python');</script>
+{% if tag %}
+<link rel="alternate" type="application/rss+xml" title="{{ settings.BLOG_NAME }}: posts with tag '{{ tag }}' feed" href="{% url feed feedurl %}" />
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+{% filter typogrify %}
+  {% if year %}<h1>{% trans "Archive for" %} {{ year }}</h1>{% endif %}
+  {% if month %}<h1>{% trans "Archive for" %} {{ month|date:"F, Y" }}</h1>{% endif %}
+  {% if day %}<h1>{% trans "Archive for" %} {{ day|date:"F d, Y" }}</h1>{% endif %}
+
+  {% if tag %}<h1>{% trans "All articles, tagged with" %} "{{ tag.get_name }}"</h1>{% endif %}
+{% endfilter %}
+
+{% comment %}
+<!-- example of tag cloud usage -->
+{% tag_cloud_for_model blog.post as tags %}
+{% render_tag_cloud tags %}
+{% endcomment %}
+
+{% for object in object_list %}
+{% include "blog/post_entry.html" %}
+{% endfor %}
+
+<ul class="navigation">
+{% if month %}
+  {% with previous_month as pm %}<li class="left"><a href="{% url month_archive year=pm.year,month=pm.month %}">{% trans "Previous month" %}</a></li>{% endwith %}
+  {% with next_month as nm %}{% if nm %}<li class="right"><a href="{% url month_archive year=nm.year,month=nm|get_month %}">{% trans "Next month" %}</a></li>{% endif %}{% endwith %}
+{% endif %}
+
+{% if day %}
+  {% with previous_day as pd %}<li class="left"><a href="{% url day_archive year=pd.year,month=pd|get_month,day=pd|get_day %}">{% trans "Previous day" %}</a></li>{% endwith %}
+  {% with next_day as nd %}{% if nd %}<li class="right"><a href="{% url day_archive year=nd.year,month=nd|get_month,day=nd|get_day %}">{% trans "Next day" %}</a></li>{% endif %}{% endwith %}
+{% endif %}
+
+{% if has_next %}<li class="left"><a rel="next" href="?page={{ next }}">{% trans "Older posts" %}</a></li>{% endif %}
+{% if has_previous %}
+  <li class="right"><a rel="prev" href="{% ifequal previous 1 %}.{% else %}?page={{ previous }}{% endifequal %}">{% trans "Newer posts" %}</a></li>
+{% endif %}
+</ul>
+{% endblock %}
+

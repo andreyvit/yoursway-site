@@ -1,0 +1,11 @@
+{% load links %}
+{% load bfmarkup %}
+{% load i18n %}
+
+{% for tag in tags %}
+<a href="{% url post_by_tag tag.name %}"
+   title="{% trans "Click to filter by" %} {{ tag.get_name }}"
+   alt="count: {{ tag.count }}"
+   class="tag-{{ tag.font_size }}"
+   rel="tag">{{ tag.get_name|strong_spaces }}</a>
+{% endfor %}

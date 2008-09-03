@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+{% load i18n %}
+{% load sidebar %}
+{% load theme %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+  <head profile="http://gmpg.org/xfn/11">
+    <title>{{ settings.BLOG_NAME }} ~ {% block title %}{{ settings.TAGLINE }}{% endblock%}</title>
+    <meta http-equiv="Content-Type" content=" text/html; charset=UTF-8" />
+    <meta name="author" content="{{ settings.BLOG_AUTHOR }}" />
+    <meta name="copyright" content="{{ settings.BLOG_COPYRIGHT }}" />
+    <!-- TODO: made me!
+	 <meta http-equiv="X-XRDS-Location" content="http://catap.ru/public/yadis.xrdf" />
+	 <link rev="made" href="mailto:catap@catap.ru" />
+	 -->
+    <link rel="openid.server" href="{% absolute_url openid_endpoint %}" />
+    <link rel="openid.delegate" href="{% absolutize_url / %}" />
+    <link rel="openid2.local_id" href="{% absolutize_url / %}" />
+    <link rel="openid2.provider" href="{% absolute_url openid_endpoint %}" />
+    <link rel="shortcut icon" href="{{ THEME_STATIC_URL }}img/favicon.ico" />
+    <link rel="alternate" type="application/atom+xml" title="{{ settings.BLOG_NAME }}: entries feed" href="{% url feed "blog" %}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ settings.BLOG_NAME }}: comments feed" href="{% url feed "comments" %}" />
+    <link rel="stylesheet" type="text/css" href="{{ THEME_STATIC_URL }}/css/blog.css" />
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="{{ THEME_STATIC_URL }}/css/blog-ie.css" /><![endif]-->
+    {% theme_js "jquery" %}
+    {% theme_js "login-shortcuts" %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script> 
+    {% block extrahead %}{% endblock %}
+  </head>
+  <body>
+  <div id="text">
+    <div id="head">
+      {% include "head.html" %}
+    </div>
+    
+    <div class="inner-body">
+      <!-- Content area begins -->
+      <div id="content">
+        <div class="inbox">
+          {% site_messages %}
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+      
+    <!-- Footer begins -->
+    <div id="foot">
+      {% include "footer.html" %}
+    </div>
+
+  </div>
+  <div id="sidebar">
+    {% include "login.html" %}
+    {% include "blog/tags.html" %}
+    {% include "search.html" %}
+    {% include "navigation.html" %}
+    {% include "blogroll.html" %}
+  </div>
+</body>
+</html>

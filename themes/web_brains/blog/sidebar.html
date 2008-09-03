@@ -1,0 +1,54 @@
+{% load i18n %}
+{% load sape_extras %}
+{% load tagging_tags %}
+
+<div class="block">
+    <div class="header"><span>{% trans "Last comments" %}</span></div>
+    {% if comments %}
+    <ul>
+    {% for comment in comments %}
+    <li><span class="author">{% link comment.user %}</span> &raquo; <a href="{{ comment.get_absolute_url }}">{{ comment.object.name }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <div>{% trans "No comments on blog" %}</div>
+    {% endif %}
+</div>
+
+<div class="block">
+    <div class="header"><span>{% trans "Last posts" %}</span></div>
+    {% if last_posts %}
+    <ul>
+    {% for post in last_posts %}
+        <li>{% link post %}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <div>{% trans "No posts on blog" %}</div>
+    {% endif %}
+</div>
+
+<div class="block">
+    <div class="header"><span>{% trans "Useful information" %}</span></div>
+    <ul>
+        <li><a title="blog entries feed" href="{% url rss_feed "blog" %}">{% trans "Blog feed" %}</a></li>
+        <li><a title="comments feed" href="{% url rss_feed "comments" %}">{% trans "Comments feed" %}</a></li>
+    </ul>
+</div>
+
+<div class="block">
+    <div class="header"><span>{% trans "Tags" %}</span></div>
+    <ul>
+        {% tag_cloud_for_model blog.post as tags %}
+        {% render_tag_cloud tags %}
+    </ul>
+</div>
+
+{% if settings.ENABLE_SAPE %}
+<div class="block advertize">
+    <div class="header"><span>{% trans "Advertize" %}</span></div>
+    <ul>
+        {% sape_links_list request %}
+    </ul>
+</div>
+{% endif %}

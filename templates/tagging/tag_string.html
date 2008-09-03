@@ -1,0 +1,10 @@
+{% load links %}
+{% load bfmarkup %}
+{% load i18n %}
+
+{% for tag in tags %}
+<a href="{% url post_by_tag tag.name %}"
+   title="{% trans "Click to filter by" %} {{ tag.get_name }}"
+   class="tag"
+   rel="tag">{{ tag.get_name }}</a>{% if not forloop.last %}, {% endif %}
+{% endfor %}

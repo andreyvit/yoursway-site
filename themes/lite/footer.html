@@ -1,0 +1,32 @@
+{% load i18n %}
+<div class="left">
+    <div class="copyrights">
+        <a href="/">{{ settings.BLOG_NAME }}</a> &copy; {% now "Y" %},
+        {% trans "Powered by " %} <a href="http://byteflow.su">Byteflow</a>
+    </div>
+</div>
+<div class="right">
+    {% if settings.LI_ACC %}
+    <!-- Liveinternet.ru counter -->
+    <script type="text/javascript"><!--
+    document.write("<a href='http://www.liveinternet.ru/click' "+
+    "target=_blank><img src='http://counter.yadro.ru/hit?t24.6;r"+
+    escape(document.referrer)+((typeof(screen)=="undefined")?"":
+    ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+    screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+    ";"+Math.random()+
+    "' alt='' title='LiveInternet: показано число посетителей за сегодня' "+
+    "border=0 width=88 height=15><\/a>")//--></script>
+    {% endif %}
+
+{% if settings.GA_ACC %}
+<!-- Google analitics counter -->
+<script type="text/javascript" src="https://ssl.google-analytics.com/ga.js"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("{{ settings.GA_ACC }}");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+{% endif %}
+</div>
+<div class="clear"></div>

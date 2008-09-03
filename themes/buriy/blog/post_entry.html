@@ -1,0 +1,57 @@
+{% load tagging_tags %}
+{% load i18n %}
+{% load bookmarks %}
+<div class="contenttitle">
+<h2>{{ object.date|date:"m/j" }}: <a
+    title="Blog entry: {{ object.name }}"
+    href="{{ object.get_absolute_url }}"> {{ object.name }}</a></h2>
+</div>
+
+<div class="contentitem">
+    <div class="contentitem1">
+    <small class="contentitemcategory">
+        Categories: 
+	{% tags_for_object object as tags %}
+        {% for tag in tags %}
+        <a rel="tag" title="Category: {{ tag.get_name }}" href="/tag/{{ tag }}/">
+            {{ tag.get_name }}</a>{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </small>
+</div>
+    <div class="contentitem2">
+        <small class="contentitempostedby">
+        Posted by: {{ object.author }}
+        </small>
+    </div>
+    <div class="contentitem3">
+        <small class="contentitemcomments">
+            <a title="Add comment on '{{ object.name }}'" href="{{ object.get_absolute_url }}#comments" rel="bookmark">
+            {% if object.approved_comments_count %}
+            {{ object.approved_comments_count }} comment{{ object.approved_comments_count|pluralize }}
+            {% else %}
+            Add comment
+            {% endif %}
+            </a>
+        </small>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="contentitem4">
+        <small class="contentitemedit">
+            <a title="Edit post '{{ object.name }}'" 
+            href="/admin/blog/post/{{object.id }}/" rel="bookmark">
+            Edit post
+            </a>
+        </small>
+    </div>
+    {% endif %}
+</div>
+<div class="contentbody">
+    {% if not post_detail and object.shortable %}
+    {{ object.html_short|safe }}&nbsp;<span class="read-more"><a href="{{ object.get_absolute_url }}">{% trans "continue&nbsp;reading" %}</a></span>
+    {% else %}
+      {{ object.html|safe }}
+    {% endif %}
+    {% if post_detail %}
+    {% bookmarks object %}
+    {% endif %}
+</div>

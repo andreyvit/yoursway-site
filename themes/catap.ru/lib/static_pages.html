@@ -1,0 +1,11 @@
+{% for name, url, title in pages %}
+  {% if name %}
+    <li>
+    {% ifequal page_url url %}
+      <span class="selected">{{ name }}</span>
+    {% else %}
+      <a href="{{ url }}" title="{{ title }}">{{ name }}</a>
+    {% endifequal %}
+    </li>
+  {% endif %}
+{% endfor %}
