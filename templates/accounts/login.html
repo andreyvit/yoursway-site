@@ -1,0 +1,19 @@
+{% extends "blog_base.html" %}
+{% load i18n %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="error">{{ error }}</div>
+<form action="." method="post">
+    <table>
+    <tr><td>Email:</td>    <td><input type="text" id="id_email" name="email" /></td></tr>
+    <tr><td>Password:</td> <td><input type="password" id="id_password" name="password" /></td></tr>
+    </table>
+    <input type="hidden" name="next" value="{{ next }}" />
+    <input type="submit" value='{% trans "Login" %}' />
+    <br/>(comment on any post to register)
+</form>
+<script type="text/javascript">
+document.getElementById('id_email').focus()
+</script>
+{% endblock %}

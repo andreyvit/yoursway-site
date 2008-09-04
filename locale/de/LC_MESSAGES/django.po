@@ -1,0 +1,977 @@
+# German translation for byteflow package. 
+# This file is distributed under the same license as the byteflow package.
+# Nico Gulden <cilugnedon@gmx.de>, 2008.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-03-25 04:45+0600\n"
+"PO-Revision-Date: 2008-03-02 15:00+0100\n"
+"Last-Translator: Nico Gulden <cilugnedon@gmx.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps/accounts/forms.py:10 apps/blog/models.py:29 apps/blogroll/models.py:12
+#: apps/discussion/forms.py:16
+msgid "Name"
+msgstr "Name"
+
+#: apps/accounts/forms.py:11 apps/discussion/forms.py:17
+#: templates/openid/complete.html:17 templates/openid/complete.html.py:25
+msgid "Email"
+msgstr "E-Mailadresse"
+
+#: apps/accounts/forms.py:11
+msgid "Changing email requires activation"
+msgstr "Die E-Mailadresse zu ändern verlangt eine neue Aktivierung"
+
+#: apps/accounts/forms.py:12
+msgid "Site"
+msgstr "Website"
+
+#: apps/accounts/forms.py:13 apps/accounts/forms.py:14
+#: templates/openid/complete.html:26
+msgid "Password"
+msgstr "Passwort"
+
+#: apps/accounts/forms.py:13
+msgid "Leave clear to keep current"
+msgstr "Frei lassen, um das aktuelle Passwort beizubehalten"
+
+#: apps/accounts/forms.py:14
+msgid "Repeat, to catch typos"
+msgstr "Wiederholen, um Tippfehler zu vermeiden"
+
+#: apps/accounts/forms.py:31
+msgid "This address already belongs to other user"
+msgstr "Die Adresse gehört bereits zu einem anderen Benutzer"
+
+#: apps/accounts/forms.py:33
+msgid "This field is required"
+msgstr "Das Feld ist erforderlich"
+
+#: apps/accounts/forms.py:42
+msgid "You must type the same password each time"
+msgstr "Das selbe Passwort muss jedesmal eingegeben werden"
+
+#: apps/accounts/views.py:45
+msgid "Email or password are incorrect!"
+msgstr "E-Mailadresse oder Password sind falsch!"
+
+#: apps/accounts/views.py:68
+msgid "Activation does not exist or already expired."
+msgstr "Aktivierung fehlt oder ist abgelaufen."
+
+#: apps/accounts/views.py:80
+msgid ""
+"Password succesfully resetted. Message with new password was sent to your "
+"email."
+msgstr ""
+"Das Passwort wurde erfolgreich zurück gesetzt. Eine Nachricht mit dem neuen "
+"Passwort wurde per E-Mail verschickt."
+
+#: apps/accounts/views.py:86
+msgid "Message with instructions to reset password was sent to your email."
+msgstr ""
+"Nachricht mit Anweisungen zum Zurücksetzen des Passworts wurde per E-Mail "
+"verschickt."
+
+#: apps/accounts/views.py:88
+msgid "Sorry, no one user is associated with this email."
+msgstr "Tut uns leid. Es existiert kein Benutzer mit dieser E-Mailadresse."
+
+#: apps/accounts/views.py:96
+msgid "You have succesfully changed your email address!"
+msgstr "Die E-Mailadresse wurde erfolgreich geändert!"
+
+#: apps/accounts/views.py:102
+msgid "Comment approval error"
+msgstr "Fehler bei der Kommentarzustimmung"
+
+#: apps/accounts/views.py:121
+msgid "Changes to profile saved."
+msgstr "Änderungen wurden im Profil gespeichert."
+
+#: apps/blog/models.py:30
+msgid "Slug"
+msgstr "Schlagzeile"
+
+#: apps/blog/models.py:31
+msgid "Post teaser"
+msgstr "Kurzfassung"
+
+#: apps/blog/models.py:32
+msgid "Text"
+msgstr "Beitrag"
+
+#: apps/blog/models.py:33
+msgid "Render method"
+msgstr "Render-Methode"
+
+#: apps/blog/models.py:34
+msgid "HTML"
+msgstr "HTML"
+
+#: apps/blog/models.py:35
+msgid "Date"
+msgstr "Datum"
+
+#: apps/blog/models.py:115
+msgid "view"
+msgstr "betrachten"
+
+#: apps/blog/views.py:71
+msgid "Please look in your mailbox for info about your account."
+msgstr "Bitte schauen Sie wegen Informationen zu Ihrem Konto in ihr Postfach."
+
+#: apps/blog/views.py:74
+msgid "Please look in your mailbox for comment approval link."
+msgstr "Bitte schauen Sie nach dem Kommentar-Zustimmungslink in Ihr Postfach."
+
+#: apps/blogroll/models.py:11
+msgid "URL"
+msgstr ""
+
+#: apps/blogroll/models.py:13
+msgid "Relations"
+msgstr ""
+
+#: apps/blogroll/models.py:14
+msgid "Order"
+msgstr ""
+
+#: apps/blogroll/models.py:14
+msgid "You can order links by this field. Link with smaller number goes first."
+msgstr ""
+
+#: apps/blogroll/models.py:16
+msgid "Friendship relation"
+msgstr ""
+
+#: apps/blogroll/models.py:17
+msgid "Physical relation"
+msgstr ""
+
+#: apps/blogroll/models.py:18
+#, fuzzy
+msgid "Profesional relation"
+msgstr "Profil bearbeiten"
+
+#: apps/blogroll/models.py:19
+msgid "Geographical relation"
+msgstr ""
+
+#: apps/blogroll/models.py:20
+#, fuzzy
+msgid "Family relation"
+msgstr "Namensübersetzung"
+
+#: apps/blogroll/models.py:21
+msgid "Romantic relation"
+msgstr ""
+
+#: apps/blogroll/models.py:22
+#, fuzzy
+msgid "Identity relation"
+msgstr "Namensübersetzung"
+
+#: apps/blogroll/models.py:42
+msgid "Link"
+msgstr ""
+
+#: apps/blogroll/models.py:43
+msgid "Links"
+msgstr ""
+
+#: apps/blogroll/relations.py:4
+msgid "contact"
+msgstr ""
+
+#: apps/blogroll/relations.py:5
+msgid "acquaintance"
+msgstr ""
+
+#: apps/blogroll/relations.py:6
+msgid "friend"
+msgstr ""
+
+#: apps/blogroll/relations.py:10
+#, fuzzy
+msgid "met"
+msgstr "Kommentar"
+
+#: apps/blogroll/relations.py:14
+msgid "co-worker"
+msgstr ""
+
+#: apps/blogroll/relations.py:15
+msgid "colleague"
+msgstr ""
+
+#: apps/blogroll/relations.py:19
+msgid "co-resident"
+msgstr ""
+
+#: apps/blogroll/relations.py:20
+msgid "neighbor"
+msgstr ""
+
+#: apps/blogroll/relations.py:24
+msgid "child"
+msgstr ""
+
+#: apps/blogroll/relations.py:25
+#, fuzzy
+msgid "parent"
+msgstr "Muster"
+
+#: apps/blogroll/relations.py:26
+msgid "sibling"
+msgstr ""
+
+#: apps/blogroll/relations.py:27
+msgid "spouse"
+msgstr ""
+
+#: apps/blogroll/relations.py:28
+msgid "kin"
+msgstr ""
+
+#: apps/blogroll/relations.py:32
+msgid "muse"
+msgstr ""
+
+#: apps/blogroll/relations.py:33
+#, fuzzy
+msgid "crush"
+msgstr "Regeln"
+
+#: apps/blogroll/relations.py:34
+#, fuzzy
+msgid "date"
+msgstr "Datum"
+
+#: apps/blogroll/relations.py:35
+msgid "sweetheart"
+msgstr ""
+
+#: apps/blogroll/relations.py:39
+#, fuzzy
+msgid "me"
+msgstr "Name"
+
+#: apps/captcha/fields.py:42
+msgid "Captcha"
+msgstr ""
+
+#: apps/captcha/fields.py:43
+msgid "Please, enter symbols, which you see on the image"
+msgstr ""
+
+#: apps/captcha/fields.py:52
+msgid "Wrong answer"
+msgstr ""
+
+#: apps/discussion/forms.py:16
+msgid "Required. 30 chars of fewer."
+msgstr "Erforderlich. 30 Zeichen oder weniger."
+
+#: apps/discussion/forms.py:17
+msgid "Required."
+msgstr "Erforderlich."
+
+#: apps/discussion/forms.py:45 apps/discussion/forms.py:86
+msgid "You are trying to reply to unavailable comment"
+msgstr "Sie versuchen auf einen nicht verfügbaren Kommentar zu antworten"
+
+#: apps/discussion/forms.py:47 apps/discussion/forms.py:88
+msgid "Trying to reply to comment from another object"
+msgstr "Sie versuchen auf einen Kommentar eines anderen Objekts zu antworten"
+
+#: apps/discussion/models.py:81
+msgid "Publishing date"
+msgstr "Datum der Veröffentlichung"
+
+#: apps/discussion/models.py:82
+msgid "Body"
+msgstr "Text"
+
+#: apps/discussion/models.py:83
+msgid "Body HTML"
+msgstr "Text in HTML"
+
+#: apps/livejournal/models.py:11
+msgid "All"
+msgstr "Alle"
+
+#: apps/livejournal/models.py:12
+msgid "Anonymous only"
+msgstr "Nur Anonym"
+
+#: apps/livejournal/models.py:13
+msgid "non-Friends"
+msgstr "Keine Freunde"
+
+#: apps/livejournal/models.py:14
+msgid "None"
+msgstr "Keiner"
+
+#: apps/livejournal/models.py:29
+msgid "Needs crossposting"
+msgstr "Benötigt Cross-Posting"
+
+#: apps/livejournal/models.py:31
+msgid "Turn off comments"
+msgstr "Kommentare deaktivieren"
+
+#: apps/livejournal/models.py:32
+msgid "Comments screening"
+msgstr ""
+
+#: apps/livejournal/models.py:33
+msgid "Access level"
+msgstr "Zugriffsebene"
+
+#: apps/openidconsumer/forms.py:25 apps/openidconsumer/views.py:129
+msgid "i-names are not supported"
+msgstr "i-names werden nicht unterstützt"
+
+#: apps/openidconsumer/forms.py:32
+#, python-format
+msgid "next url \"%s\" is invalid"
+msgstr "nächste URL \"%s\" ist ungültig"
+
+#: apps/openidconsumer/forms.py:54
+msgid "This email is already in database. Please choose another."
+msgstr ""
+"Die E-Mailadresse ist bereits in der Datenbank. Bitte eine andere auswählen."
+
+#: apps/openidconsumer/forms.py:80
+msgid "This email don't exist. Please choose another."
+msgstr "Die E-Mailadresse existiert nicht. Bitte eine andere auswählen."
+
+#: apps/openidconsumer/forms.py:87
+msgid ""
+"Please enter a correct email and password. Note that both fields are case-"
+"sensitive."
+msgstr ""
+"Bitte gültige E-Mailadresse und Passwort eingeben. Beachten Sie, beide "
+"Felder sind abhängig von Groß-/Kleinschreibung"
+
+#: apps/openidconsumer/forms.py:89
+msgid "This account is inactive."
+msgstr "Das Konto ist inaktiv."
+
+#: apps/openidconsumer/views.py:135
+msgid "The OpenID was invalid"
+msgstr "Die OpenID war ungültig"
+
+#: apps/openidconsumer/views.py:160
+msgid "The request was cancelled"
+msgstr "Der Abruf wurde abgebrochen"
+
+#: apps/openidconsumer/views.py:294
+msgid "Invalid POST data"
+msgstr "Ungültige POST Daten"
+
+#: apps/openidconsumer/views.py:296
+msgid "You must have at least one OpenID if you don't have email!"
+msgstr ""
+"Sie müssen mindestens ein OpenID haben, wenn Sie keine E-Mailadresse haben!"
+
+#: apps/openidconsumer/views.py:302
+msgid "OpenID deassociated successfully"
+msgstr "OpenID wurde erfolgreich entfernt"
+
+#: apps/robots/models.py:19
+msgid "pattern"
+msgstr "Muster"
+
+#: apps/robots/models.py:19
+msgid ""
+"Case-sensitive. A missing trailing slash does also match to files which "
+"start with the name of the pattern, e.g., '/admin' matches /admin.html too. "
+"Some major search engines allow an asterisk (*) as a wildcard and a dollar "
+"sign ($) to match the end of the URL, e.g., '/*.jpg$'."
+msgstr ""
+
+#: apps/robots/models.py:22 apps/robots/models.py:23
+msgid "url"
+msgstr "URL"
+
+#: apps/robots/models.py:43
+msgid "robot"
+msgstr "Robot"
+
+#: apps/robots/models.py:43
+msgid ""
+"This should be a user agent string like 'Googlebot'. Enter an asterisk (*) "
+"for all user agents. For a full list look at the <a target=_blank "
+"href='http://www.robotstxt.org/wc/active/html/index.html'>database of Web "
+"Robots</a>."
+msgstr ""
+
+#: apps/robots/models.py:44
+msgid "These are URLs which are allowed to be accessed by web robots."
+msgstr "Das sind URLs, auf die Webroboter zugreifen dürfen."
+
+#: apps/robots/models.py:45
+msgid "These are URLs which are not allowed to be accessed by web robots."
+msgstr "Das sind URLs, auf die Webroboter nicht zugreifen dürfen."
+
+#: apps/robots/models.py:47
+msgid "crawl delay"
+msgstr "Crawl Verzögerung"
+
+#: apps/robots/models.py:50
+msgid "rule"
+msgstr "Regel"
+
+#: apps/robots/models.py:51
+msgid "rules"
+msgstr "Regeln"
+
+#: apps/robots/models.py:56
+msgid "URL patterns"
+msgstr "URL Muster"
+
+#: apps/robots/models.py:57
+msgid "Advanced options"
+msgstr "Erweiterte Einstellungen"
+
+#: apps/robots/models.py:67 apps/robots/models.py:71
+msgid "and"
+msgstr "und"
+
+#: apps/robots/models.py:68
+msgid "allowed"
+msgstr "erlaubt"
+
+#: apps/robots/models.py:72
+msgid "disallowed"
+msgstr "nicht erlaubt"
+
+#: apps/tagging/__init__.py:22
+#, python-format
+msgid "The model %s has already been registered."
+msgstr "Das Model %s wurde bereits registriert."
+
+#: apps/tagging/fields.py:72
+#, python-format
+msgid "%s can only be set on instances."
+msgstr "%s kann nur bei Instanzen gesetzt werden."
+
+#: apps/tagging/forms.py:22 apps/tagging/validators.py:19
+#, python-format
+msgid "Each tag may be no more than %s characters long."
+msgstr "Jedes Tag sollte nicht länger als %s Zeichen sein."
+
+#: apps/tagging/managers.py:50
+#, python-format
+msgid "No tags were given: \"%s\"."
+msgstr "Keine Tags vergeben: \"%s\"."
+
+#: apps/tagging/managers.py:52
+#, python-format
+msgid "Multiple tags were given: \"%s\"."
+msgstr "Mehrere Tags sind vergeben: \"%s\"."
+
+#: apps/tagging/models.py:17
+msgid "name"
+msgstr "Name"
+
+#: apps/tagging/models.py:18
+msgid "name translation"
+msgstr "Namensübersetzung"
+
+#: apps/tagging/models.py:25 apps/tagging/models.py:47
+msgid "tag"
+msgstr "Tag"
+
+#: apps/tagging/models.py:26
+msgid "tags"
+msgstr "Tags"
+
+#: apps/tagging/models.py:48
+msgid "content type"
+msgstr ""
+
+#: apps/tagging/models.py:49
+msgid "object id"
+msgstr ""
+
+#: apps/tagging/models.py:56
+msgid "tagged item"
+msgstr ""
+
+#: apps/tagging/models.py:57
+msgid "tagged items"
+msgstr ""
+
+#: apps/tagging/utils.py:183
+msgid ""
+"If a list or tuple of tags is provided, they must all be tag names, Tag "
+"objects or Tag ids."
+msgstr ""
+
+#: apps/tagging/utils.py:185
+msgid "The tag input given was invalid."
+msgstr "Die eingebenen Tags sind ungültig."
+
+#: apps/tagging/utils.py:230
+#, python-format
+msgid "Invalid distribution algorithm specified: %s."
+msgstr "Ungültiger Verteilalgorithmus gewählt: %s."
+
+#: apps/tagging/validators.py:27
+msgid "Multiple tags were given."
+msgstr "Mehrere Tags wurden vergeben."
+
+#: apps/tagging/validators.py:30
+#, python-format
+msgid "A tag may be no more than %s characters long."
+msgstr "Ein Tag sollte nicht länger als %s Zeichen sein."
+
+#: apps/tagging/templatetags/tagging_tags.py:19
+#, python-format
+msgid "tags_for_model tag was given an invalid model: %s"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:32
+#, python-format
+msgid "tag_cloud_for_model tag was given an invalid model: %s"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:56
+#, python-format
+msgid "tagged_objects tag was given an invalid model: %s"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:89
+#, python-format
+msgid "%s tag requires either three or five arguments"
+msgstr "%s Tag erfordert entweder drei oder fünf Argumente"
+
+#: apps/tagging/templatetags/tagging_tags.py:91
+#: apps/tagging/templatetags/tagging_tags.py:143
+#: apps/tagging/templatetags/tagging_tags.py:198
+#, python-format
+msgid "second argument to %s tag must be 'as'"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:94
+#: apps/tagging/templatetags/tagging_tags.py:147
+#, python-format
+msgid "if given, fourth argument to %s tag must be 'with'"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:96
+#, python-format
+msgid "if given, fifth argument to %s tag must be 'counts'"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:141
+#, python-format
+msgid "%s tag requires either three or between five and seven arguments"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:155
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:164
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid choice: '%(value)s'"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:170
+#, python-format
+msgid "%(tag)s tag was given an invalid option: '%(option)s'"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:175
+#, python-format
+msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:196
+#, python-format
+msgid "%s tag requires exactly three arguments"
+msgstr "Tag %s benötigt genau drei Argumente"
+
+#: apps/tagging/templatetags/tagging_tags.py:221
+#, python-format
+msgid "%s tag requires exactly five arguments"
+msgstr "Tag %s erfordert genau fünf Argumente"
+
+#: apps/tagging/templatetags/tagging_tags.py:223
+#, python-format
+msgid "second argument to %s tag must be 'in'"
+msgstr ""
+
+#: apps/tagging/templatetags/tagging_tags.py:225
+#, python-format
+msgid "fourth argument to %s tag must be 'as'"
+msgstr ""
+
+#: templates/head.html:18
+msgid "Login with"
+msgstr "Anmelden mit"
+
+#: templates/head.html:19
+msgid "password"
+msgstr "Passwort"
+
+#: templates/head.html:19
+msgid "or"
+msgstr "oder"
+
+#: templates/head.html:20
+msgid "OpenID"
+msgstr "OpenID"
+
+#: templates/head.html:23 themes/buriy/head.html:28
+#: themes/web_brains/head.html:28
+msgid "Hello,"
+msgstr "Hallo,"
+
+#: templates/head.html:32 themes/buriy/head.html:30
+#: themes/web_brains/head.html:30
+msgid "Admin"
+msgstr "Verwalten"
+
+#: templates/head.html:33 themes/buriy/head.html:29
+#: themes/web_brains/head.html:29
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/head.html:34 themes/buriy/head.html:31
+#: themes/web_brains/head.html:31
+msgid "Logout"
+msgstr "Abmelden"
+
+#: templates/accounts/profile_edit.html:5
+msgid "Profile editing"
+msgstr "Profil bearbeiten"
+
+#: templates/accounts/profile_edit.html:8
+msgid "Associated OpenIDs"
+msgstr "Zugeordnete OpenIDs"
+
+#: templates/accounts/reset.html:8
+msgid "Password reset"
+msgstr "Passwort zurücksetzen"
+
+#: templates/accounts/reset.html:13
+msgid "Please enter your email."
+msgstr "Bitte geben Sie Ihre E-Mailadresse ein."
+
+#: templates/accounts/reset.html:16
+msgid "Reset password"
+msgstr "Password zrücksetzen"
+
+#: templates/blog/bookmarks.html:3 themes/lite/blog/bookmarks.html:3
+msgid "Add post to"
+msgstr "Beitrag hinzufügen zu"
+
+#: templates/blog/bookmarks.html:5 themes/lite/blog/bookmarks.html:5
+msgid "Add to"
+msgstr "Hinzufügen zu"
+
+#: templates/blog/comment_form.html:4 themes/lite/blog/comment_form.html:4
+#, python-format
+msgid "Comment form for &laquo;%(object)s&raquo;"
+msgstr ""
+
+#: templates/blog/comment_form.html:9 templates/blog/post_detail.html:25
+#: themes/lite/blog/comment_form.html:9
+msgid "Comment"
+msgstr "Kommentar"
+
+#: templates/blog/comment_form.html:10 themes/lite/blog/comment_form.html:10
+msgid "Preview"
+msgstr "Vorschau"
+
+#: templates/blog/comment_form.html:11 themes/lite/blog/comment_form.html:11
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: templates/blog/featured.html:17 templates/blog/post_entry.html:24
+#: themes/lite/blog/featured.html:17 themes/lite/blog/post_entry.html:37
+msgid "continue&nbsp;reading"
+msgstr "weiterlesen"
+
+#: templates/blog/post_detail.html:28 themes/lite/blog/post_detail.html:30
+msgid "Pingbacks"
+msgstr "Pingbacks"
+
+#: templates/blog/post_detail.html:45 themes/lite/blog/post_detail.html:49
+msgid "Comments"
+msgstr "Kommentare"
+
+#: templates/blog/post_detail.html:47 themes/lite/blog/post_detail.html:51
+msgid "No comments for this post"
+msgstr "Keine Kommentare für diesen Beitrag"
+
+#: templates/blog/post_detail.html:63 themes/lite/blog/post_detail.html:71
+msgid "reply"
+msgstr "antworten"
+
+#: templates/blog/post_detail.html:70 themes/lite/blog/post_detail.html:78
+msgid "edit"
+msgstr "bearbeiten"
+
+#: templates/blog/post_detail.html:74 themes/lite/blog/post_detail.html:82
+msgid "cancel"
+msgstr "abbrechen"
+
+#: templates/blog/post_detail.html:83 themes/lite/blog/post_detail.html:91
+msgid "delete"
+msgstr "löschen"
+
+#: templates/blog/post_entry.html:17 themes/lite/blog/post_entry.html:16
+msgid "comment, comments, comments"
+msgstr "Kommentar, Kommentare, Kommentare"
+
+#: templates/blog/post_entry.html:19 themes/lite/blog/post_entry.html:25
+msgid "pingback, pingbacks, pingbacks"
+msgstr "Pingback, Pingbacks, Pingbacks"
+
+#: templates/blog/post_list.html:8 themes/buriy/blog/post_list.html:5
+#: themes/web_brains/blog/post_list.html:5
+msgid "Posts"
+msgstr "Beiträge"
+
+#: templates/blog/post_list.html:25 templates/blog/post_list.html.py:26
+#: templates/blog/post_list.html:27 themes/buriy/blog/post_list.html:19
+#: themes/buriy/blog/post_list.html:20 themes/buriy/blog/post_list.html:21
+#: themes/lite/blog/post_list.html:21 themes/lite/blog/post_list.html.py:22
+#: themes/lite/blog/post_list.html:23 themes/web_brains/blog/post_list.html:19
+#: themes/web_brains/blog/post_list.html:20
+#: themes/web_brains/blog/post_list.html:21
+msgid "Archive for"
+msgstr "Archiv für"
+
+#: templates/blog/post_list.html:29 themes/buriy/blog/post_list.html:23
+#: themes/lite/blog/post_list.html:25 themes/web_brains/blog/post_list.html:23
+msgid "All articles, tagged with"
+msgstr "Alle Artikle getagged mit"
+
+#: templates/blog/post_list.html:44 themes/buriy/blog/post_list.html:38
+#: themes/lite/blog/post_list.html:40 themes/web_brains/blog/post_list.html:38
+msgid "Previous month"
+msgstr "vorheriger Monat"
+
+#: templates/blog/post_list.html:45 themes/buriy/blog/post_list.html:39
+#: themes/lite/blog/post_list.html:41 themes/web_brains/blog/post_list.html:39
+msgid "Next month"
+msgstr "Nächster Monat"
+
+#: templates/blog/post_list.html:49 themes/buriy/blog/post_list.html:33
+#: themes/lite/blog/post_list.html:45 themes/web_brains/blog/post_list.html:33
+msgid "Previous day"
+msgstr "vorheriger Tag"
+
+#: templates/blog/post_list.html:50 themes/buriy/blog/post_list.html:34
+#: themes/lite/blog/post_list.html:46 themes/web_brains/blog/post_list.html:34
+msgid "Next day"
+msgstr "nächster Tag"
+
+#: templates/blog/post_list.html:53 templates/wpimport/post_list.html:12
+#: themes/lite/blog/post_list.html:49
+msgid "Older posts"
+msgstr "Ältere Beiträge"
+
+#: templates/blog/post_list.html:55 templates/wpimport/post_list.html:14
+#: themes/lite/blog/post_list.html:51
+msgid "Newer posts"
+msgstr "Neuere Beiträge"
+
+#: templates/openid/complete.html:8
+msgid "Your OpenID is verified! "
+msgstr "Ihre OpenID ist überprüft! "
+
+#: templates/openid/complete.html:10
+msgid "Associate your OpenID"
+msgstr "Ihre OpenID zuordnen"
+
+#: templates/openid/complete.html:14
+msgid "A new account"
+msgstr "Ein neues Konto"
+
+#: templates/openid/complete.html:16
+msgid "Screen name"
+msgstr "Benutzername"
+
+#: templates/openid/complete.html:23
+msgid "An exisiting account"
+msgstr "Ein bestehendes Konto"
+
+#: templates/openid/list.html:5 templates/openid/list.html.py:8
+msgid "Your OpenIDs"
+msgstr "Ihre OpenIDs"
+
+#: templates/openid/list.html:15
+msgid "Delete"
+msgstr "Löschen"
+
+#: templates/openid/list.html:22
+msgid "Associate new OpenID"
+msgstr "Neue OpenID zuordnen"
+
+#: templates/openid/list.html:23 templates/openid/signin.html:13
+msgid "OpenID URL"
+msgstr "OpenID URL"
+
+#: templates/openid/list.html:25
+msgid "Associate"
+msgstr "Zuordnen"
+
+#: templates/openid/signin.html:5 templates/openid/signin.html.py:8
+#: templates/openid/signin.html:15
+msgid "Sign in"
+msgstr "Eintragen"
+
+#: templates/openid/signin.html:12
+msgid "Sign in using your OpenID"
+msgstr "OpenID zur Benutzung eintragen"
+
+#: templates/tagging/tag_cloud.html:7 templates/tagging/tag_string.html:7
+#: themes/lite/blog/post_entry.html:32
+msgid "Click to filter by"
+msgstr "Klicken, zum Filtern nach"
+
+#: templates/templatetags/datelinks.html:1
+msgid "Click to see day archive"
+msgstr "Klicken für Tagesarchiv"
+
+#: templates/templatetags/datelinks.html:1
+msgid "Click to see month archive"
+msgstr "Klicken für Monatsarchiv"
+
+#: templates/templatetags/datelinks.html:1
+msgid "Click to see year archive"
+msgstr "Klicken für Jahresarchiv"
+
+#: themes/buriy/head.html:20 themes/web_brains/head.html:20
+msgid "About"
+msgstr "Über"
+
+#: themes/buriy/head.html:44 themes/web_brains/head.html:44
+msgid "Login with password"
+msgstr "Mit Passwort anmelden"
+
+#: themes/buriy/head.html:50 themes/lite/head.html:32
+#: themes/web_brains/head.html:50
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
+
+#: themes/buriy/head.html:51 themes/web_brains/head.html:51
+msgid "Login with OpenID"
+msgstr "Mit OpenID anmelden"
+
+#: themes/buriy/blog/post_list.html:45
+#: themes/web_brains/blog/post_list.html:45
+msgid "Previous year"
+msgstr "vorheriges Jahr"
+
+#: themes/buriy/blog/post_list.html:46
+#: themes/web_brains/blog/post_list.html:46
+msgid "Next year"
+msgstr "Nächstes Jahr"
+
+#: themes/buriy/blog/sidebar.html:44 themes/lite/blog/sidebar.html:7
+#: themes/web_brains/blog/sidebar.html:6
+msgid "Last comments"
+msgstr "Letzten Kommentare"
+
+#: themes/buriy/blog/sidebar.html:65 themes/lite/blog/sidebar.html:22
+#: themes/web_brains/blog/sidebar.html:19
+msgid "Last posts"
+msgstr "Letzten Beiträge"
+
+#: themes/buriy/blog/sidebar.html:73 themes/lite/blog/sidebar.html:32
+#: themes/lite/blog/sidebar.html.py:47 themes/web_brains/blog/sidebar.html:27
+msgid "No posts on blog"
+msgstr "Keine Beiträge im Blog"
+
+#: themes/buriy/blog/sidebar.html:78 themes/web_brains/blog/sidebar.html:32
+msgid "Useful information"
+msgstr "Nützliche Informationen"
+
+#: themes/buriy/blog/sidebar.html:80 themes/web_brains/blog/sidebar.html:34
+msgid "Blog feed"
+msgstr "Feed für Blog"
+
+#: themes/buriy/blog/sidebar.html:81 themes/web_brains/blog/sidebar.html:35
+msgid "Comments feed"
+msgstr "Feed für Kommentare"
+
+#: themes/buriy/blog/sidebar.html:86 themes/lite/blog/sidebar.html:53
+#: themes/web_brains/blog/sidebar.html:40
+msgid "Tags"
+msgstr "Tags"
+
+#: themes/buriy/blog/sidebar.html:94 themes/lite/blog/sidebar.html:66
+#: themes/web_brains/blog/sidebar.html:48
+msgid "Advertize"
+msgstr "Werben"
+
+#: themes/lite/base.html:18
+#, fuzzy
+msgid "blog entries feed"
+msgstr "Feed für Kommentare"
+
+#: themes/lite/base.html:19
+#, fuzzy
+msgid "comments feed"
+msgstr "Feed für Kommentare"
+
+#: themes/lite/footer.html:6
+msgid "Powered by "
+msgstr ""
+
+#: themes/lite/head.html:21
+#, fuzzy
+msgid "Authorization with email and password"
+msgstr "Mit Passwort anmelden"
+
+#: themes/lite/head.html:25 themes/lite/head.html.py:30
+#, fuzzy
+msgid "Signin"
+msgstr "Eintragen"
+
+#: themes/lite/head.html:27
+#, fuzzy
+msgid "Authorization with OpenID"
+msgstr "Mit OpenID anmelden"
+
+#: themes/lite/blog/post_detail.html:27
+#, fuzzy
+msgid "Make comment"
+msgstr "Letzten Kommentare"
+
+#: themes/lite/blog/sidebar.html:17 themes/web_brains/blog/sidebar.html:14
+msgid "No comments on blog"
+msgstr "Keine Kommentare im Blog"
+
+#: themes/lite/blog/sidebar.html:37
+#, fuzzy
+msgid "Popular posts"
+msgstr "Ältere Beiträge"
+
+#: themes/lite/blog/sidebar.html:38
+msgid "Feature not ready yet"
+msgstr ""
+
+#: themes/lite/blog/sidebar.html:61
+msgid "Blogroll"
+msgstr ""
+
+#~ msgid "No Tag found matching \"%s\"."
+#~ msgstr "Kein Tag gefunden, dass mit \"%s\" übereinstimmt."

@@ -1,0 +1,14 @@
+This is django-orm-cache[1], changed by byteflow project.
+
+Changes include some bugfixes (current svn r15 from official repository
+doesn't work) and behavior change, which is described below.
+
+In official release to enable model caching you just inherit your model from
+CachedModel and another work is done automatically, which means that your
+custom manager (if it uses 'objects' name) will be overridden by
+CacheManager. This behavior is removed (CacheManager will automatically
+occupy name 'cache') and you just need to inherit all your custom managers
+you want to be cached from CacheManager.
+
+
+[1]: http://code.google.com/p/django-orm-cache/

@@ -2,11 +2,11 @@
 <html>
 	<head>		
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>			
-		<link rel="stylesheet" type="text/css" /media="screen,print" href="/media/style.css" />
+		<link rel="stylesheet" type="text/css" /media="screen,print" href="/media/styles/style.css" />
 		<title>{% block title %}(no title!!!!){% endblock %}</title>
 	</head>
 	<body>
-	  <div id="main_menu">
+	<div id="main_menu">
     	<ul>
     		{% for item in global_menu %}
       		{% ifequal item.name active_global_item %}
