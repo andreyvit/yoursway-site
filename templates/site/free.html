@@ -3,12 +3,81 @@
 
 {% block contents %}
 
-<p>YourSway Software Update for Java</p>
+<h1>No longer a pain in the ass:</h1>
 
-<p>YourSway Commons</p>
 
-<p>YourSway Eclipse OS X Repackager</p>
+<h2>Automatic Updates</h2>
 
-<p>YourSway create-dmg</p>
+<p><b>YourSway Software Update for Java.</b> Once you get to distributing your application publicly (or enterprise-wide), you have to think of a way for it to stay up-to-date while causing the least trouble to your beloved users. YourSway Software Update allows you to quickly add a reliable and powerful cross-platform update functionality to your application.</p>
+
+<p>YourSway Software Update works both with plain Java applications and with OSGi-based applications. In particular, it is compatible with Eclipse and Rich Client Platform.</p>
+
+<p>We aimed to make a very simple user interface, but still pack in a few advanced features. YourSway Software Update gracefully handles a ton of exceptional conditions. You get a completely modeless UI by default, and you can replace it with a custom one if you like.</p>
+
+<p>YourSway Software Update is licensed under Apache License 2.0, which means it is free for any use, you can distribute and/or modify it.</p>
+
+<p>YourSway Software Update SDK 0.0 is available currently. It is pretty stable and is used for our own products, however it somewhat lacks the documentation.</p>
+<ul>
+	<li>Get the pre-built SDK: <a href="#">yoursway-software-update-sdk-0.0.zip</a></li>
+	<li>Check out the sources from <a href="http://github.com/andreyvit/yoursway-builder/">our Git repository at GitHub</a></li>
+</ul>
+<p>If you have any questions, feel free to ask them in <a href="http://livechat.yoursway.com/">our Live Chat</a> or just <a href="mailto:support@yoursway.com">mail us</a>.</p>
+
+
+
+
+<h2>Continuous Builds</h2>
+
+<p>“Release early, release often” is not that easy once you realize you have to bring up a continuous builds system. And if you're starting new projects often, the maintenance of the build system takes quite some time.</p>
+
+<p>Enter <b>YourSway Builder</b>. We created this tool with a single idea in mind: create a hosted solution for continuous builds, which would be as easy to maintain as hosted bug trackers and hosted source control systems are.</p>
+
+<p>YourSway Builder runs on Google App Engine. We don't currently provide accounts on our installation, but you can sign up for your own Google App Engine account and upload our application in less than five minutes. That's it — no server management, no Apache configuration, no more broken email notifications or unavailable build systems.</p>
+
+<p>You also need to deploy our client application on one or more builder machines. There's no reconfiguration or redeployment required to change the build process or even set up builds of a new project. The client is completely controlled from the Web application and even updates itself automatically, so you can forget about it once it's set up. (Estimated client deployment time: 5 minutes on a Mac, 20 minutes on Linux.)
+
+<p>Everything else is controlled by a simple declarative script you upload into the running Web application.</p>
+
+<p>YourSway Builder 0.1 is available currently. That's a beta release, but we're actively using it here at YourSway. It might lack some features, but is absolutely usable.</p>
+<ul>
+	<li>Get the client and the server in a zip: <a href="#">yoursway-builder-0.1.zip</a></li>
+	<li>Check out the sources from <a href="http://github.com/andreyvit/yoursway-builder/">our Git repository at GitHub</a></li>
+</ul>
+<p>Explore the existing issues, our future plans and file your bugs on <a href="http://yoursway.lighthouseapp.com/projects/15885-builder/overview">public bug tracker on Lighthouse</a>.</p>
+<p>If you have any questions, feel free to ask them in <a href="http://livechat.yoursway.com/">our Live Chat</a> or just <a href="mailto:support@yoursway.com">mail us</a>.</p>
+
+
+
+
+<h2>Running Eclipse and OSGi on a Mac</h2>
+		
+<p><b>YourSway Eclipse OS X Repackager</b> turns a regular Eclipse installation (or your RCP application, or your OSGi-based application) into a proper Mac OS X bundle, which looks like a single file in Finder. Get the familiar drag-n-drop experience, forget the multifile nightmare.</p>
+
+<p>YourSway Eclipse OS X Repackager 1.1 is available currently. That's a stable release, and is confirmed to work with Eclipse 3.4-based applications.</p>
+<ul>
+	<li>Get the Mac OS X application: <a href="#">yoursway-eclipse-osx-repackager-1.1-mac.zip</a></li>
+	<li>Get a cross-platform console tool to integrate into your build process: <a href="#">yoursway-eclipse-osx-repackager-1.1-console.zip</a></li>
+	<li>Check out the sources from <a href="http://github.com/andreyvit/yoursway-eclipse-osx-repackager/">our Git repository at GitHub</a></li>
+</ul>
+<p>Explore the existing issues, our future plans and file your bugs on <a href="http://yoursway.lighthouseapp.com/projects/15884-create-dmg/overview">public bug tracker on Lighthouse</a>.</p>
+<p>If you have any questions, feel free to ask them in <a href="http://livechat.yoursway.com/">our Live Chat</a> or just <a href="mailto:support@yoursway.com">mail us</a>.</p>
+
+
+
+
+<h2>Creating fancy Mac OS X .dmg's</h2>
+
+<p><b>YourSway create-dmg</b> build a .dmg for you which has an image background, has fixed custom icon positioning and opens in the Icon View. <b>This tool requires a Mac</b> — unfortunately, no solutions exist currently to create .dmg files on non-Mac platforms.</p>
+
+<p>This tool is licensed under GNU General Public License, because it incorporates portions of GPL-licensed code from Adium repository. You can modify this program to suite your needs, but you have to provide the source code of any modifications upon request.</p>
+
+<p>create-dmg 1.0 is available currently. That's a stable release, and is confirmed to work with Mac OS X Leopard.</p>
+<ul>
+	<li>Get the scripts in a zip: <a href="#">yoursway-create-dmg-1.0.zip</a></li>
+	<li>Check out the sources from <a href="http://github.com/andreyvit/yoursway-create-dmg/">our Git repository at GitHub</a></li>
+</ul>
+<p>Explore the existing issues, our future plans and file your bugs on <a href="http://yoursway.lighthouseapp.com/projects/15884-create-dmg/overview">public bug tracker on Lighthouse</a>.</p>
+<p>If you have any questions, feel free to ask them in <a href="http://livechat.yoursway.com/">our Live Chat</a> or just <a href="mailto:support@yoursway.com">mail us</a>.</p>
+
 
 {% endblock %}
