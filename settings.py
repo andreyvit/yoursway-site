@@ -28,7 +28,8 @@ RECAPTCHA_PRIVATE_KEY =''
 
 
 ADMINS = (
-    ('Sam Bond', 'sopelin.sam@gmail.com'),
+    ('Sam Bond', 'sopelkin.sam@gmail.com'),
+    ('Yuri Baburov', 'burchik@gmail.com'),
 )
 
 MANAGERS = ADMINS

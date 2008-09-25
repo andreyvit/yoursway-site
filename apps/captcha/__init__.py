@@ -6,9 +6,9 @@ import os.path
 
 from django.db import settings
 try:
-    import Image
-    import ImageFont
-    import ImageDraw
+    from PIL import Image
+    from PIL import ImageFont
+    from PIL import ImageDraw
 except ImportError:
     if settings.CAPTCHA == 'simple':
         raise

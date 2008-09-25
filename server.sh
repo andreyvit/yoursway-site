@@ -11,7 +11,7 @@ case "$1" in
 
 		    sudo su buriy -c "PYTHONPATH="$PROJDIR" \
                         python $PROJDIR/manage.py runfcgi pidfile=$PIDFILE \
-                               host=127.0.0.1 port=3034 daemonize=true method=threaded"
+                               host=127.0.0.1 port=3034 daemonize=true method=threaded --settings=settings"
                     echo "Server started."
 		else
 		    echo "Warning: PID file exists!"

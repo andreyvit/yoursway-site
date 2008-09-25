@@ -5,3 +5,4 @@
 deseb
 django
 site.pid
+apps/blog/secret.txt

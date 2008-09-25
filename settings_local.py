@@ -1,23 +1,19 @@
 # -*- encoding: utf-8 -*-
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '465'
-EMAIL_HOST_USER = 'sopelkin.sam'
-EMAIL_HOST_PASSWORD = 'iddqd1988'
-EMAIL_USE_TLS = True
-
 DATABASE_ENGINE = 'sqlite3' # variants: mysql, sqlite3
-DATABASE_NAME = 'blog.db'
+DATABASE_NAME = '/srv/www/yoursway.com/mainsite/blog.db'
 DATABASE_USER = ''
 DATABASE_PASSWORD = ''
+
+SERVER_EMAIL = 'blog@yoursway.com'
+
+FORCE_SCRIPT_NAME = ''
 
 BLOG_NAME = u'Yoursway Blog'
 TAGLINE = u''
 FOOTER = u'(c) 2007-2008 <a href="/">YoursWay LLC</a>'
 
 DEFAULT_FROM_EMAIL = '%s <blog@yoursway.com>' % BLOG_NAME
-# Uncomment to get reports of errors by email
-ADMINS = (('Sam Bond', 'sopelkin.sam@gmail.com'), )
 
 # You may place templates for rendering HTML to the ../themes/{{ THEME }}/ directory.
 # They will override the templates with the same name from ../templates/ directory.
@@ -58,7 +54,7 @@ LJ_PASSWORD = ''
 
 # DEBUG must be False in production mode
 # Please read http://byteflow.su/wiki/DEBUG
-DEBUG = True
+DEBUG = False
 
 # Set it to True if you want to activate orm_debug template tag
 # You also need to setup INTERNAL_IPS setting 

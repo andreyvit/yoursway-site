@@ -51,8 +51,6 @@ try:
 except ImportError:
     urlpatterns = patterns('',)
 
-admin.autodiscover()
-
 urlpatterns += patterns(
     '',
     url(r'^admin/(.*)', admin.site.root, name='admin'),

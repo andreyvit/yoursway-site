@@ -45,7 +45,7 @@ def menu(request):
         globalmenuitem(name = 'free', url = 'free/', icon = 'icon-free.png',  alt = 'Free Tools'),
         globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'About Us'),
         globalmenuitem(name = 'aboutus', url = 'aboutus/', icon = 'icon-aboutus.png',  alt = 'About Us'),
-        globalmenuitem(name = 'blog', url = 'blog/', icon = 'icon-aboutus.png',  alt = 'Blog'),
+        globalmenuitem(name = 'blog', url = 'blog/', icon = 'icon-blog.png',  alt = 'Blog'),
     ]
     
     path = request.META['PATH_INFO'].lstrip('/')
