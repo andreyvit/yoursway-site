@@ -2,7 +2,7 @@
 <html>
 	<head>		
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>			
-		<link rel="stylesheet" type="text/css" /media="screen,print" href="/media/styles/style.css" />
+		<link rel="stylesheet" type="text/css" media="screen,print" href="/css/style.css" />
 		<title>{% block title %}(no title!!!!){% endblock %}</title>
 	</head>
 	<body>
@@ -10,9 +10,9 @@
     	<ul>
     		{% for item in global_menu %}
       		{% ifequal item.name active_global_item %}
-        		<li class="active"><a href=""><img src="/media/images/{{ item.icon }}" width="192" height="192" alt="{{ item.alt }}" /></a>
+        		<li class="active"><a href=""><img src="/images/{{ item.icon }}" width="192" height="192" alt="{{ item.alt }}" /></a>
       		{% else %}
-        		<li class="inactive">{% if item.active %}<a href="{{ item.full_url }}">{% endif %}<img src="/media/images/{{ item.icon }}" width="96" height="96" alt="{{ item.alt }}" />{% if item.active %}</a>{% endif %}
+        		<li class="inactive">{% if item.active %}<a href="{{ item.full_url }}">{% endif %}<img src="/images/{{ item.icon }}" width="96" height="96" alt="{{ item.alt }}" />{% if item.active %}</a>{% endif %}
       		{% endifequal %}
     		{% endfor %}
     	</ul>			
