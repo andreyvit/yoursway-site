@@ -15,3 +15,16 @@ handlers:
   login: admin
 - url: .*
   script: main.py
+
+skip_files: |
+ ^(.*/)?(
+ (app\.ya?ml)|
+ (index\.ya?ml)|
+ (.*\.pxm)|
+ (#.*#)|
+ (.*~)|
+ (.*\.py[co])|
+ (.*/RCS/.*)|
+ (\..*)|
+ )$
+
