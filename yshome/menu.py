@@ -8,6 +8,8 @@ class menuitem:
         self.full_url = self.compute_full_url()
     
     def compute_full_url(self):
+        if self.url.startswith('http'):
+            return self.url
         if self.parent == None:
             return '/' + self.url
         else:
@@ -44,7 +46,7 @@ def menu(path):
         globalmenuitem(name = 'free', url = 'free/', icon = 'icon-free.png',  alt = 'Free Tools'),
         globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'About Us'),
         globalmenuitem(name = 'aboutus', url = 'aboutus/', icon = 'icon-aboutus.png',  alt = 'About Us'),
-        globalmenuitem(name = 'blog', url = 'blog/', icon = 'icon-blog.png',  alt = 'Blog'),
+        globalmenuitem(name = 'blog', url = 'http://blog.yoursway.com/', icon = 'icon-blog.png',  alt = 'Blog'),
     ]
     
     path = path.lstrip('/')
