@@ -4,6 +4,9 @@ runtime: python
 api_version: 1
 
 handlers:
+- url: /googlefa2675787dd35c7a.html
+  static_files: static/googlefa2675787dd35c7a.html
+  upload: static/googlefa2675787dd35c7a.html
 - url: /images
   static_dir: static/images
 - url: /javascript
@@ -17,7 +20,7 @@ handlers:
   script: main.py
 
 skip_files: |
- ^(.*/)?(
+ ^((.*/)?(
  (app\.ya?ml)|
  (index\.ya?ml)|
  (.*\.pxm)|
@@ -26,5 +29,5 @@ skip_files: |
  (.*\.py[co])|
  (.*/RCS/.*)|
  (\..*)|
- )$
+ )$)|design/
 

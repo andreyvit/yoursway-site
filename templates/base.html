@@ -3,6 +3,8 @@
 	<head>		
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>			
 		<link rel="stylesheet" type="text/css" media="screen,print" href="/css/style.css" />
+		<link rel="stylesheet" type="text/css" media="screen,print" href="/css/blueprint/screen.css" />
+		<link rel="stylesheet" type="text/css" media="screen,print" href="/css/blueprint/plugins/fancy-type/fancy-type.css" />
 		<title>{% block title %}(no title!!!!){% endblock %}</title>
 	</head>
 	<body>
@@ -20,19 +22,22 @@
     {% block before_midstrip %}{% endblock %}
     {% block midstrip %}{% endblock %}
     
-    {% ifnotequal content_menu|length 0 %}
-      <ul id="content_menu">
-    		{% for item in content_menu %}
-      		{% ifequal item.name active_content_item %}
-        		<li class="active">{{ item.text }}</li>
-      		{% else %}
-        		<li class="inactive"><a href="{{ item.full_url }}">{{ item.text }}</a></li>
-      		{% endifequal %}
-    		{% endfor %}
-      </ul>
-    {% endifnotequal %}
+    <div class="container">
+      
+      {% ifnotequal content_menu|length 0 %}
+        <div id="content_menu">
+          <div class="column inactive span-1">&nbsp;</div>
+      		{% for item in content_menu %}
+        		{% ifequal item.name active_content_item %}
+          		<div class="column active span-{{ item.cols }} {% if forloop.last %}append-{{ remaining_content_menu_cols }} last{% endif %}">{{ item.text }}</div>
+        		{% else %}
+          		<div class="column inactive span-{{ item.cols }} {% if forloop.last %}append-{{ remaining_content_menu_cols }} last{% endif %}"><a href="{{ item.full_url }}">{{ item.text }}</a></div>
+        		{% endifequal %}
+      		{% endfor %}
+        </div>
+        <hr class="space">
+      {% endifnotequal %}
     
-    <div id="content">
       {% block contents %}{% endblock %}
     </div>
 		<div id="footer">

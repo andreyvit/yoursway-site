@@ -118,100 +118,33 @@ h4 { font-weight: bold; font-size: 10px; line-height: 18px; }
 
 /* content menu horizontal -------------------------------- */
 
-ul#content_menu { margin-left: 9%; margin-right: 9%; padding-left: 0px; padding-right: 0px; }
+ul#content_menu { margin: 0px; padding: 0px; }
 
-#content_menu li { padding-right: 1em; }
+ul#content_menu li { margin: padding-right: 1em; }
 
 /* content menu appearance -------------------------------- */
 
-ul#content_menu { list-style: none; font-size: 16pt; }
+#content_menu { font-size: 2em; margin-bottom: 0.75em; }
 
-#content_menu li { list-style-type: none; list-style-image: none; list-style-position: outside; list-style-type: none; display: inline; }
+#content_menu div, #content_menu div a, #content_menu div a:visited, #content_menu div a:hover { color: #00a000; x-color: blue; }
 
-#content_menu li, #content_menu li a, #content_menu li a:visited, #content_menu li a:hover { color: #00a000; x-color: blue; }
+#content_menu div.active { font-weight: bold; }
 
-#content_menu li.active { font-weight: bold; }
+#content_menu div a, #content_menu div a:visited { text-decoration: underline; }
 
-#content_menu li a, #content_menu li a:visited { text-decoration: underline; }
-
-#content_menu li a:hover { color: #00c000; }
-
-/* content horizontal -------------------------------- */
-
-#content { padding-left: 9%; padding-right: 9%; }
-
-/* content appearance -------------------------------- */
-
-#content {  }
-
-#content h3 { font-weight: bold; font-size: 1em; line-height: 18px; }
-
+#content_menu div a:hover { color: #00c000; }
+*/
 /* footer appearance -------------------------------- */
 
 #footer { font-size: 9pt; text-align: center; }
 
-/* GRID */
-
-.grid2col:after, .grid2cola:after, .grid2colb:after, .grid2colc:after, .grid2cold:after, .grid2cole:after, .grid2colf:after, .grid3col:after, .grid3cola:after, .grid4col:after, .grid5col:after, .grid6col:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-
-.grid2col, .grid2cola, .grid2colb, .grid2colc, .grid2cold, .grid2cole, .grid2colf, .grid3col, .grid3cola, .grid4col, .grid5col, .grid6col { zoom: 1; }
-
-.column { float: left; }
-
-.grid2col, .grid2cola, .grid2colb, .grid2colc, .grid2cold, .grid2cole, .grid2colf, .grid3col, .grid3cola, .grid4col, .grid5col, .grid6col { width: 100%; }
-
-.grid2col .column { width: 49%; }
-
-.grid2col .grid2col .column { width: 47.8%; }
-
-.grid3col .grid2col .column { width: 46%; }
-
-.grid4col .grid2col .column { width: 45%; }
-
-.grid2cola .column.first { width: 66%; }
-
-.grid2cola .column.last { width: 32%; }
-
-.grid2colb .column.first { width: 74.9%; }
-
-.grid2colb .column.last { width: 23%; }
-
-.grid2colc .column.first { width: 32%; }
-
-.grid2colc .column.last { width: 66%; }
-
-.grid2cold .column.first { width: 23%; }
-
-.grid2cold .column.last { width: 74.9%; }
-
-.grid2cole .column.first { width: 79%; }
-
-.grid2cole .column.last { width: 19%; }
-
-.grid2colf .column.first { width: 19%; }
-
-.grid2colf .column.last { width: 79%; }
-
-.grid3col .column { width: 32%; margin-left: 2%; }
-
-.grid2col .grid3col .column { width: 31%; }
-
-.grid3cola .column { width: 58%; margin-left: 2%; }
-
-.grid3cola .column.first,
-.grid3cola .column.last { width: 19%; }
-
-.grid4col .column { width: 23%; margin-left: 3%; }
-
-.grid5col .column { width: 18.4%; margin-left: 2%; }
-
-.grid6col .column { width: 15%; margin-left: 2%; }
-
-.column.first, .column.last { margin-left: 0 !important; }
-
-.column.last { float: right !important; }
-
 /* everything else -------------------------------- */
+
+blockquote { margin: 0px 20px; font-style: normal !important; }
+
+.success_story_sidebar { float: right; width: 400px; margin: 0px 0px 10px 30px; }
+
+.success_story_sidebar h2 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
 
 em { font-style: normal; background: #ffffcc; }
 
@@ -232,16 +165,6 @@ img { border: none; }
 table.layouting { border: 0px; }
 
 td { vertical-align: top; }
-
-p, ul { color: #463C3C; xfont-family: 'ArialMT','Arial',sans-serif; font-size: 15px; line-height: 20px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: 0pt; margin: 0px; opacity: 1; padding-bottom: 6px; }
-
-h1 { padding-bottom: 10px; font-size: 36px; }
-
-h2 { font-size: 28px; padding-bottom: 10px; }
-
-h3 { font-size: 18px; font-weight: normal; padding-bottom: 10px; }
-
-li { padding-bottom: 6px; }
 
 .clearfix:after { content: "."; display: block; height: 0; font-size: 0; clear: both; visibility: hidden; }
 

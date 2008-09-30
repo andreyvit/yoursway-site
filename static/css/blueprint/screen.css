@@ -9,8 +9,9 @@
 
 @import 'lib/reset.css';
 @import 'lib/typography.css';
-/*@import 'lib/grid.css';*/
+@import 'lib/grid.css';
 @import 'lib/forms.css';
+@import 'lib/plugins/css-classes/css-classes.css';
 
 /* Plugins:
    Additional functionality can be found in the plugins directory.
@@ -18,5 +19,5 @@
    @import 'plugins/buttons/buttons.css'; */
    
 /* See the grid:
-   Uncomment the line below to see the grid and baseline.
-   .container { background: url(lib/grid.png); } */
+   Uncomment the line below to see the grid and baseline. */
+/*   .container { background: url(/css/blueprint/lib/grid.png); } */

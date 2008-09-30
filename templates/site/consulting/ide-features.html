@@ -1,0 +1,279 @@
+{% extends "../../base.html" %}
+{% block title %}Consulting services by YourSway{% endblock %}
+
+{% block contents %}
+
+<!--
+<p style="float: right;">
+	YourSway LLC<br>
+	Novosibirsk, Russia<br>
+	Tel.: +7 906 193 29 59 <br>
+	Skype: andreyvit (our CTO)<br>
+	E-mail: <a href="mailto:info@yoursway.com">info@yoursway.com</a>
+</p>
+-->
+
+<div class="column prepend-1 span-10">
+  
+  <h2>Infrastructure</h2>
+  
+  <p>We’ll start by creating all the infrastructure for this project — the source repository, bug 
+  tracker, nightly builds, update sites, and the initial application that can automatically 
+  update itself.</p>
+  
+  <p>We’ll also have to learn more about your language and the people who will be using it, 
+  so expect a lot of communication.</p>
+  
+  <h2>Parser</h2>
+  
+  <p>Before we can provide anything useful to you, we’ll need a parser for your language im- 
+  plemented in Java. If you happen to already have it, we can start by reusing it.</p>
+  
+  <p>Error recovery is an issue, however. An interpreter can stop at the first error it encoun- 
+  ters, but if IDE does the same it won’t be able to provide any code assistance below the 
+  place of the first compilation error (and in many cases, won’t provide any code assis- 
+  tance at all because the code which is being typed is not yet valid). We can get away 
+  with this at first, but on later stages it’s best to modify (or rewrite) the parser to handle 
+  error recovery.</p>
+  
+</div>
+
+<div class="column prepend-1 span-12 last quiet">
+  <p><img class="top" src="/images/cons/ide/generic-ide.png" width="450" height="305"></p>
+  <p style="text-align: center; text-indent: 0px;">A typical DLTK-based IDE looks like this.</p>
+</div>
+
+<hr class="space clear">
+  
+<div class="column prepend-1 span-8">
+  <p><img class="top" src="/images/cons/ide/basic-editing.png" width="290" height="240"></p>
+</div>
+  
+<div class="column span-15 last">
+
+  <h2>Basic Editing</h2>
+  
+  <p>When we have a parser, we can implement syntax highlighting, outline view, code fold- 
+  ing,  a non-type-inferenced (textual) search, and code editing assistance (brace match- 
+  ing, auto-closing of braces, automatic indenting, templates).</p>
+  
+  <p>When all of this is done, you’ll have an Eclipse-based IDE that is as good as (or better 
+  than) any good text editor with proper highlighting configured.</p>
+  
+  <h2>Launching</h2>
+  
+  <p>To run your programs from inside the IDE and output the results to the console view, we 
+  need to build a launching support. This is one of those things Eclipse makes easy — takes less than a week.</p>
+
+</div>
+
+<div class="column prepend-1 span-8">
+  <p><img class="top" src="/images/cons/ide/interactive-console.png" width="263" height="191"></p>
+</div>
+
+<div class="column span-15 last">
+  
+  <h2>Interactive Console</h2>
+  
+  <p>A special view that allows to interact with the interpreter interactively, with code assis- 
+  tance and documentation access.</p>
+
+  <p>An interactive console allows quick experimentation with language constructs. Also, 
+  using “Paste to Console” command, it is possible to execute the program code in the 
+  console, and then interact with the results.</p>
+  
+  <p>We also have our own “worksheet” concept which we can use instead of the interactive 
+  console. It’s a very promising solution which merges an editor with a console, allowing 
+  to quickly test any code you are typing (just like what Maple/MATLAB does for mathe- 
+  matics code).</p>
+  
+</div>
+
+<hr class="space clear">
+
+<div class="column prepend-1 span-12">
+  
+  <h2>Type Inferencing</h2>
+  
+  <p>This will be a major step, allowing us to implement smart code completion. The com- 
+  plexity of type inferencing implementation depends a great deal on the trickiest details 
+  of the language, so we’ll need a complete manual (and, better yet, the sources of the 
+  interpreter) to estimate this more or less accurately.</p>
+  
+  <h2>Content Assistance</h2>
+  
+  <p>This step includes implementation of code completion and smart navigation facilities 
+  based on the type inferencing engine. Smart navigation includes ability to navigate to 
+  method/class declarations, to view call hierarchies and type hierarchies.</p>
+  
+  <p>Documentation access (displaying class/method comments) will also be implemented 
+  on this step.</p>
+  
+  <p>Code assistance is the first thing that brings a major advantage to using an IDE over 
+  editing the sources in a text editor.  However there are more features that help boost the 
+  productivity and quality of the developments, and differentiate a modern IDE from ordi- 
+  nary text editors.</p>
+  
+</div>
+
+<div class="column prepend-1 span-10 last">
+  <p><img class="top" src="/images/cons/ide/type-inferencing.png" width="394" height="188"></p>
+  <p><img class="top" src="/images/cons/ide/hierarchy.png" width="241" height="124"></p>
+</div>
+
+<hr class="space clear">
+
+<div class="column prepend-1  span-7">
+  <p><img class="top" src="/images/cons/ide/quick-fix.png" width="241" height="124"></p>
+</div>
+
+<div class="column span-16 last">
+  
+  <h2>Code Rewriting and Quick Fixes</h2>
+  
+  <p>The next big step is to implement code manipulation facility based on the AST (abstract 
+  syntax tree) of your language. This means that our IDE will be able to modify the source 
+  code, and enables us to implement convenient local refactorings called “quick fixes”.</p>
+  
+  <p>Examples are:<br>
+  “assign this expression to a new local variable”<br>
+  “assign this argument to a new field”<br>
+  “convert this local variable into a field”<br>
+  “add this extra argument to the signature of the called method”</p>
+  
+  <p>There are many more possible quick fixes, some of them being language-specific. Ideally we should watch your developers work, take note of repeated operations, and turn 
+  them into quick fixes. We cannot do that from here; however we’ll do our best by talking 
+  with your existing developers (if any) and using our own experience with similar languages.</p>
+  
+</div>
+
+<hr class="space clear">
+
+<div class="column prepend-1  span-8">
+  <p><img class="top" src="/images/cons/ide/refactoring.png" width="299" height="191"></p>
+</div>
+
+<div class="column span-15 last">
+  
+  <h2>Refactoring</h2>
+  
+  <p>Unlike quick fixes, global refactorings affect the whole program, and thus each refactor- 
+  ing needs special processing to determine what changes need to be done.</p>
+  
+  <p>Examples of the global refactorings are:<br>
+  “rename method” <br>
+  “rename class” <br>
+  “move static method to another class” <br>
+  “extract some methods and fields into a new base class” <br>
+  “pull up some methods and fields into a base class” <br>
+  “push down some methods and fields into derived classes“<br> 
+  “create a new factory method and turn all class instantiations into calls” </p>
+  
+  <p>Similar to quick fixes, the exact set of refactorings is a question to study and discussion.</p>
+  
+  <p>Each refactoring needs special careful coding to make sure it leaves the code with exactly the same semantics, so the length of this stage greatly depends on what refactorings we’ll decide to do.</p>
+  
+</div>
+
+<hr class="space clear">
+
+<div class="column prepend-1 span-15">
+  
+  <h2>Static Analysis</h2>
+  
+  <p>A usual problem with dynamically-typed languages is that most programming errors are 
+  often only found at run time. However, employing the type inferencing engine, the IDE 
+  can calculate missing type information and diagnose many error conditions without 
+  running the program.</p>
+  
+  <p>Here are a few out of many examples of the error conditions an IDE might be able to 
+  detect:<br>
+  “the called method does not exist in that object” <br>
+  “incorrect method arguments” <br>
+  “unreachable code” <br>
+  “a conditional expression always evaluates to false/true” <br>
+  “the reference might be null” <br>
+  “the thrown exception is never caught”</p>
+  
+</div>
+
+<div class="column prepend-1 span-7 last">
+  <p><img class="top" src="/images/cons/ide/static-checking.png" width="245" height="125"></p>
+</div>
+
+
+<hr class="space clear">
+
+<div class="column prepend-1 span-9">
+  <p><img class="top" src="/images/cons/ide/debugging.png" width="374" height="266"></p>
+</div>
+
+<div class="column prepend-1 span-13 last">
+  
+  <h2>Debugging</h2>
+
+  <p>IDE debugging support is a very nice thing to have.</p>
+  
+</div>
+
+<hr class="space clear">
+
+<div class="column prepend-1 span-17">
+  <h2>Automated Testing Integration</h2>
+
+  <p>If you are doing / planning to do automated tests for your scripts, we can integrate a 
+  test runner into the IDE that would allow the developers to quickly launch tests, glance 
+  through the execution results and analyze failure stack traces.</p>
+
+  
+  <h2>Version Control Integration</h2>
+  
+  <p>There are Eclipse plugins for many version control systems, but they are of varying 
+  quality. We can include a plugin for the version control system you’re using into our application. If you happen to be using a rare or in-house custom version control system 
+  (we actually had customers who did), we can implement a plugin for it. Or, if the existing 
+  plugin for your favorite VCS is missing some important features, we can implement the 
+  necessary changes.</p>
+</div>
+
+<div class="column prepend-1 span-4 last">
+  <p><img class="top" src="/images/cons/ide/automated-testing.png" width="219" height="199"></p>
+</div>
+
+<div class="column prepend-1 span-4 last">
+  <p><img class="top" src="/images/cons/ide/vcs-integration.png" width="206" height="220"></p>
+</div>
+
+
+<hr class="space clear">
+
+<div class="column prepend-1 span-9">
+  <p><img class="top" src="/images/cons/ide/deployment.png" width="366" height="148"></p>
+</div>
+
+<div class="column prepend-1 span-13 last">
+  <h2>Deployment</h2>
+  
+  <p>The application we’ll build will be able to update itself from a central location. If you 
+  are going to have a small to moderate install base of the IDE, this should cover your update needs.</p>
+  
+  <p>We will of course also properly package the application on all platforms (build a Windows installation program and a Mac OS X .dmg for the application, optionally also 
+  Linux packages if you need them).</p>
+  
+  <p>We can also create a custom enterprise deployment solution should you need one.</p>
+</div>	
+
+<div class="column prepend-1 span-22">
+  <h2>Integration</h2>
+  
+  <p>Depending on how the language fits into the activities of your company, the  IDE might 
+  serve as a platform for integration with the entire toolset you are using. We can implement various levels of integration, starting with a simple menu items that runs an external tool with configurable parameters (already part of Eclipse), and ranging to a custom 
+  user interface seamlessly (and invisibly) communicating with a specific tool.</p>
+  
+  <p>We can also handle any other features you might need from the IDE.</p>
+	
+  <h2>Interested?</h2>
+
+  <p><a href="/consulting/overview#contact">Contact us</a> to discuss how we can help.</p>
+</div>
+
+{% endblock %}

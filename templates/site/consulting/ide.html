@@ -1,0 +1,183 @@
+{% extends "../../base.html" %}
+{% block title %}Consulting services by YourSway{% endblock %}
+
+{% block contents %}
+
+<!--
+<p style="float: right;">
+	YourSway LLC<br>
+	Novosibirsk, Russia<br>
+	Tel.: +7 906 193 29 59 <br>
+	Skype: andreyvit (our CTO)<br>
+	E-mail: <a href="mailto:info@yoursway.com">info@yoursway.com</a>
+</p>
+-->
+
+<div class="column prepend-1 span-15 append-7">
+
+  <p>Your unique in-house language or framework deserves an adequate IDE support. Depending on your usage patterns, the improvements a new IDE brings will differ.</p>
+
+  <h2>New Developments</h2>
+
+</div>
+
+<div class="column span-15 prepend-1">
+
+  <p>Speed up the development:</p>
+
+  <ul>
+  <li>Spend less time on routine coding. Advanced source editor with code completion подскажет забытое имя метода и поможет быстро набирать повторяющиеся фрагменты.</li>
+  	<li>Make fewer errors. Известно, что на отладку затрачивается больше времени, чем на само кодирование. Статические проверки, реализованные в <span class="caps">IDE</span>, поймают очевидные ошибки и помогут от них избавиться, не прибегая к отладке.</li>
+  	<li>Debug faster. Визуальный отладчик ускорит рутинные операции, а также даст возможность программисту сфокусироваться на отлаживаемом приложении, а не на взаимодействии с отладчиком.</li>
+  </ul>
+
+<p>Improve your code quality:</p>
+
+<ul>
+<li>Employ testing and/or test-driven development. За счет интеграции тестирования в <span class="caps">IDE </span>разработчики смогут чаще запускать тесты и легче находить причину failed тестов.</li>
+	<li>Continuously improve the quality by means of refactoring. This allows you to keep your code base manageable and accomodate requirements change. Your developers are sure to do many more improvements with automated refactoring support on the <span class="caps">IDE</span> side.</li>
+</ul>
+
+</div>
+
+<div class="column prepend-1 span-7 last quiet">
+  
+  <h3 class="alt">Personality: Andrey Tarantsov</h3>
+  
+  <p>Andrey is our chief technical officer and the primary contact person for any new projects or business questions. He's also the one who contributed the initial Ruby type inferencing code into Eclipse DLTK and demoed it at EclipseCon 2007.</p>
+  
+</div>
+
+<hr class="space">
+
+<h2 class="column prepend-10 span-14 last">Code Maintenance</h2>
+
+<div class="column span-9 quiet">
+  
+  <h3 class="alt">Success story: <span class="caps">DTL IDE</span></h3>
+
+	<p>EskoArtwork has developed an in-house dynamically typed language in 80s. The language, called <span class="caps">DTL</span>, has been is use since then, allowing the company to smoothly transition from mainframes to microcomputers running <span class="caps">DOS</span>, Windows and then Mac <span class="caps">OS X</span>.</p>
+
+	<p>The <span class="caps">DTL IDE</span> developed by YourSway includes a state-of-art type inferencing engine for <span class="caps">DTL</span>, which calculates  the necessary type information for code assistance and static checks.</p>
+
+	<p>The debugger part of the <span class="caps">IDE</span> provides a state-of-art debugger with all the standard features like stepping, breakpoints, watches and variables view. It also includes a few advanced features not commonly found in debuggers for dynamically-typed languages: Attach to Process and on-the-fly code reloading.</p>
+
+</div>
+
+<div class="column prepend-1 span-14 last">
+  
+  <p>Stop introducing new bugs when making changes:</p>
+
+  <ul>
+  <li>static checking ensures that every code fragment broken by a new change gets spotted immediately</li>
+  	<li>continuous testing helps detect and eliminate regressions, and <span class="caps">IDE</span> integration ensures that developers will actually be running the tests often</li>
+  </ul>
+
+  <p>Help new developers to get up to speed (or existing developers to dig into some unfamiliar components):</p>
+
+  <ul>
+  <li>smart navigation, type/call hierarchies and search help to explore the code base faster</li>
+  	<li>code completion allows to quickly spot the needed method without browsing code for hours</li>
+  	<li>visual debugger helps to solve complex mysteries and explore dark corners faster</li>
+  </ul>
+
+  <p>Improve code quality by letting your developers apply automated refactorings to the code base. Static analysis kung-fu makes sure that no new bugs get introduced along the way.</p>
+  
+</div>
+
+<hr class="space">
+
+<div class="column prepend-1 span-15 append-7">
+	<h2>Automated Migration</h2>
+
+
+	<p>Sooner or later the technologies you use become outdated, and you seek migration to another platform. You almost certainly cannot afford a rewrite of the entire codebase, so automated migration is the way to go.</p>
+
+
+	<p>It is possible to migrate to another library, framework or to another language altogether. The automated migration tool created for your specific needs will handle 95% of all the needed changes, so that with very little effort your codebase gets into a brand new world.</p>
+	
+	<h2>Individual Features</h2>
+	
+	<p>Obviously, we know nothing about your language at this point. However we want to give you an idea of what to expect, so here's a <em>very rough</em> estimation based on a set of assumptions:</p>
+	
+	<ul>
+	  <li>An IDE based on a slightly fixed Eclipse DLTK is okay for you.</li>
+	  <li>You don't have significant custom requirements</li>
+	  <li>You're not striking for a no-compromise usability (Eclipse Platform has a number of known usability problems, and working around them takes significant time).</li>
+  </ul>
+	
+	<table>
+	  <thead>
+	    <tr>
+	      <th>Feature</th>
+	      <th>Man-weeks</th>
+      </tr>
+    </thead>
+	  <tbody>
+	    <tr>
+	      <td>Parser</td>
+	      <td>0–6</td>
+      </tr>
+	    <tr>
+	      <td>Syntax Highlighting, Outline, Folding, Search</td>
+	      <td>2</td>
+      </tr>
+	    <tr>
+	      <td>Automatic Indenting, Bracket Matching</td>
+	      <td>1</td>
+      </tr>
+	    <tr>
+	      <td>Code Templates (Snippets)</td>
+	      <td>1</td>
+      </tr>
+	    <tr>
+	      <td>Launching</td>
+	      <td>1 (actually less)</td>
+      </tr>
+	    <tr>
+	      <td>Debugging</td>
+	      <td>6–20</td>
+      </tr>
+	    <tr>
+	      <td>Testing Integration</td>
+	      <td>1–3</td>
+      </tr>
+	    <tr>
+	      <td>Type Inferencing</td>
+	      <td>6–16</td>
+      </tr>
+	    <tr>
+	      <td>Code Completion, Documentation Access, Smart Navigation</td>
+	      <td>2–4</td>
+      </tr>
+	    <tr>
+	      <td>Interactive Console</td>
+	      <td>1–4</td>
+      </tr>
+	    <tr>
+	      <td>AST Rewriting (required for quick fixes and refactoring)</td>
+	      <td>4–8</td>
+      </tr>
+	    <tr>
+	      <td>Quick Fixes</td>
+	      <td>2–4</td>
+      </tr>
+	    <tr>
+	      <td>Refactoring</td>
+	      <td>4–12</td>
+      </tr>
+	    <tr>
+	      <td>Static Checking</td>
+	      <td>4–12</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <p>Obviously, your specific case might differ from what is listed here.
+	
+  <h2>Interested?</h2>
+
+  <p><a href="/consulting/overview#contact">Contact us</a> to discuss how we can help.</p>
+</div>
+
+{% endblock %}

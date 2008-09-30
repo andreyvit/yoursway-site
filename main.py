@@ -14,9 +14,10 @@ class PageHandler(BaseHandler):
     if path == '':
       path = 'index'
     
-    self.data.update(**menu(path))
+    active_item, data = menu(path)
+    self.data.update(**data)
     
-    self.render_and_finish('site/' + path.lstrip('/').rstrip('/') + '.html')
+    self.render_and_finish('site/' + active_item.template + '.html')
 
 url_mapping = [
   ('^/([a-z0-9/-]*)$', PageHandler),
