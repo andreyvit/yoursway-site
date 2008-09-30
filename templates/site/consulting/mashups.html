@@ -1,4 +1,4 @@
-{% extends "../base.html" %}
+{% extends "../../base.html" %}
 {% block title %}Consulting services by YourSway{% endblock %}
 
 {% block contents %}
@@ -13,22 +13,80 @@
 </p>
 -->
 
-<p>YourSway LLC is a <b>small team of passionate developers</b> with solid experience and a proven record of deliveries. We have broad skills and interests, and we are eager to help you shape the future of your company or of the whole world.</p>
+<div class="column prepend-1 span-15 append-7">
 
-<p>Thinking of an <b>IDE</b> for your in-house language or other custom development tools?</p>
+  <p>The story is no longer about the Web or the desktop alone.
 
-<blockquote><p>We are the initial committers and contributors to the Eclipse Dynamic Languages Toolkit project. We know a hell lot about language tools, static analysis and type inferencing. Learn <a href="ide/">more about IDEs</a> or <a href="#contact">contact us</a>.</p></blockquote>
+  If you need a desktop application, we can bet you want it to interact with web services.
 
-<p>Looking for someone to build you a <b>Web</b> application or a <b>desktop</b> application for Mac and Windows? Or are you looking for both?</p>
+  If you need a Web application, chances are you also want a matching desktop widget or a full-featured client for offline use, or maybe a matching iPhone app.
 
-<blockquote><p>Many people actually want to get both desktop and Web presence: a Web application and a desktop widget, or a desktop application with a lightweight Web app to use on the go. We know that the distinction between desktop and web blends, and we have professionals in both areas to bring you the best integrated solutions possible. Learn <a href="mashups/">more about desktop/Web development</a> or <a href="#contact">contact us</a>.</p></blockquote>
+  We recognized that to be strong in any of these areas, we have to be strong in all of them. That’s why we have both Web, Win32 and Mac OS X people on staff, working as a team to bring you integrated solutions.</p>
 
-<p>Excited about the <b>iPhone</b>? Want to bring you application to iPhone?</p>
+</div>
 
-<blockquote><p>We're bringing all our Mac OS X development and user interactions design expertise to iPhone. Expect amazing results! Learn <a href="iphone/">more about iPhone development</a> or <a href="#contact">contact us</a>.</p></blockquote>
+<div class="column span-14 prepend-1">
 
-<p style="margin-top: 20px;"><a name="contact"></a>
-<iframe height="665" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="http://yoursway.wufoo.com/embed/z7x4m1/"><a href="http://yoursway.wufoo.com/forms/z7x4m1/" title="Get in touch">Get in touch with us »</a></iframe>
 
+  <h2>Developments</h2>
+
+
+  <p>Here’s what we can do for you:</p>
+<ul>
+  <li>Cross-platform desktop applications.<br>
+  We use Java to minimize development costs and complexity, but we employ many advanced techniques to provide native experience on both platforms.
+  
+  <li>Platform-native applications.<br>
+  We have experience developing Mac OS X applications in Cocoa and Windows applications on Win32 API or ATL/WTL. However, in our opinion, using Java is the best approach in many ways. While in some cases making a native Mac OS X application is reasonable, we strongly recommend against doing native development for Windows.
+
+
+  <li>Web development.
+  We employ Python and Ruby to create stunning web applications faster and easier. Pylons, Django, Rails, Merb or Ramaze, plus unobtrusive JavaScript with jquery or prototype.
+
+  <li>We can design your application to be hosted on Amazon S3 or Google App Engine.
+
+</ul>
+
+</div>
+
+<div class="column prepend-1 span-8 last quiet">
+  
+  <h3 class="alt">Personality: Mikhail Kalugin</h3>
+  
+  <p>Mikhail is our Mac OS X wizard. He is an author of numerous contributions to the Cocoa port of Java SWT (Standard Widget Toolkit), heads our Cocoa/CocoaTouch development team and knows a hell lot about Eclipse debuggers (yep, this is from another story).</p>
+
+  <p>The thing Mikhail loves most is making prototypes, so if you contact us asking for an OS X application, an advanced SWT technique or for a debugger, you are likely to get a demo app written by Mikhail in a couple of days.</p>
+  
+  <h3 class="alt">Personality: Yuri Baburov</h3>
+
+   <p>Yuri heads our web development team. He’s been doing Python-based web development for 3 years, and is now actively exploring Ruby on Rails. Yuri is a contributor to the Django project and the maintainer of deseb — database schema migration plugin for Django.</p>
+  
+  
+</div>
+
+<div class="column prepend-1 span-15 append-7">
+
+  
+  <h2>An advanced mashup: Taskus</h2>
+
+  	<p>We have developed a solution which helps developers to employ personal planning and stay on top of their tasks spread over the various bug trackers and project management software.</p>
+
+    <p>Taskus is a desktop application which allows you to keep all your tasks in a simple text file, with 2-way synchronization with several bug tracking and project management applications (with more to come). Taskus is available for both Windows and Mac OS X.</p>
+
+    <p>myTaskus is a Web portal which is kept in sync with desktop Taskus and allows you to view and edit your tasks while your personal computer is not available.</p>
+
+    <p>iTaskus is a soon-to-be-released iPhone application which is kept in sync with myTaskus and also allows you to view and edit you tasks on the go.</p>
+  
+  
+</div>
+
+<hr class="space">
+
+<div class="column prepend-1 span-15">
+	
+  <h2>Interested?</h2>
+
+  <p><a href="/consulting/overview#contact">Contact us</a> to discuss how we can help.</p>
+</div>
 
 {% endblock %}
