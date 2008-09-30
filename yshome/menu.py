@@ -56,7 +56,7 @@ def menu(path):
         globalmenuitem(name = 'home',    url = '',  icon = 'icon-yoursway.png', template = 'index', alt = 'Home'),
         globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'About Us'),
         # globalmenuitem(name = 'ide',     url = 'ide/', active = False, icon = 'icon-ide.png',      alt = 'YourSway IDE'),
-        globalmenuitem(name = 'taskus',  url = 'taskus/',  icon = 'icon-taskus.png',   alt = 'Taskus'),
+        # globalmenuitem(name = 'taskus',  url = 'taskus/',  icon = 'icon-taskus.png',   alt = 'Taskus'),
         globalmenuitem(name = 'free', url = 'free/', icon = 'icon-free.png',  alt = 'Free Tools'),
         globalmenuitem(name = 'aboutus', url = 'aboutus/', icon = 'icon-aboutus.png',  alt = 'About Us'),
         globalmenuitem(name = 'blog', url = 'http://blog.yoursway.com/', icon = 'icon-blog.png',  alt = 'Blog'),
@@ -69,10 +69,10 @@ def menu(path):
     
     if active_global_item.name == 'taskus':
         content_menu = [
-            contentmenuitem(parent = active_global_item, name = '', url = '', template = 'overview', text = "5 easy rules"),
-            contentmenuitem(parent = active_global_item, name = 'screencast', url = 'screencast/', text = 'Screencast'),
-            contentmenuitem(parent = active_global_item, name = 'qa', url = 'qa/', text = 'Productivity Q&A'),
-            contentmenuitem(parent = active_global_item, name = 'support', url = 'support/', text = 'Support'),
+            contentmenuitem(parent = active_global_item, name = '', url = '', template = 'overview', text = "5 easy rules", cols = 4),
+            contentmenuitem(parent = active_global_item, name = 'screencast', url = 'screencast/', text = 'Screencast', cols = 4),
+            contentmenuitem(parent = active_global_item, name = 'qa', url = 'qa/', text = 'Productivity Q&A', cols = 6),
+            contentmenuitem(parent = active_global_item, name = 'support', url = 'support/', text = 'Support', cols = 4),
         ]
     elif active_global_item.name == 'consulting':
         content_menu = [
