@@ -53,8 +53,9 @@ def find_active_item(path, items):
     
 def menu(path):
     global_menu = [
-        globalmenuitem(name = 'home',    url = '',  icon = 'icon-yoursway.png', template = 'index', alt = 'Home'),
-        globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'About Us'),
+        # globalmenuitem(name = 'home',    url = '',  icon = 'icon-yoursway.png', template = 'index', alt = 'Home'),
+        # globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'Consulting'),
+        globalmenuitem(name = 'consulting', url = '', icon = 'icon-yoursway.png',  alt = 'YourSway'),
         # globalmenuitem(name = 'ide',     url = 'ide/', active = False, icon = 'icon-ide.png',      alt = 'YourSway IDE'),
         # globalmenuitem(name = 'taskus',  url = 'taskus/',  icon = 'icon-taskus.png',   alt = 'Taskus'),
         globalmenuitem(name = 'free', url = 'free/', icon = 'icon-free.png',  alt = 'Free Tools'),

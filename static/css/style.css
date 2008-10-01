@@ -140,7 +140,9 @@ ul#content_menu li { margin: padding-right: 1em; }
 
 /* everything else -------------------------------- */
 
-blockquote { margin: 0px 20px; font-style: normal !important; }
+/*blockquote { margin: 0px 20px; font-style: normal !important; }*/
+
+blockquote.nomargin { margin-left: 0px; margin-right: 0px; }
 
 .success_story_sidebar { float: right; width: 400px; margin: 0px 0px 10px 30px; }
 
@@ -177,3 +179,4 @@ td { vertical-align: top; }
 .clearfix { display: block; }
 
 /* End hide from IE5/Mac */
+
