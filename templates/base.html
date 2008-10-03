@@ -26,7 +26,7 @@
       
       {% ifnotequal content_menu|length 0 %}
         <div id="content_menu">
-          <div class="column inactive span-1">&nbsp;</div>
+          <div class="column span-1">&nbsp;</div>
       		{% for item in content_menu %}
         		{% ifequal item.name active_content_item %}
           		<div class="column active span-{{ item.cols }} {% if forloop.last %}append-{{ remaining_content_menu_cols }} last{% endif %}">{{ item.text }}</div>

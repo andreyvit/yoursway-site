@@ -80,7 +80,7 @@ def menu(path):
         contentmenuitem(parent = active_global_item, name = '', url = '', template = 'overview', text = "Overview", cols = 4),
         contentmenuitem(parent = active_global_item, name = 'ide', url = 'ide/', text = 'I want an IDE', cols = 5),
         contentmenuitem(parent = active_global_item, name = 'ide-features', url = 'ide/features', text = '', visible = False),
-        contentmenuitem(parent = active_global_item, name = 'mashups', url = 'mashups/', text = 'Desktop <span class="alt">&</span> Web app', cols = 7),
+        contentmenuitem(parent = active_global_item, name = 'mashups', url = 'mashups/', text = 'Desktop & Web app', cols = 7),
         contentmenuitem(parent = active_global_item, name = 'iphone', url = 'iphone/', text = 'iPhone app', cols = 4),        ]
     else:
         content_menu = []

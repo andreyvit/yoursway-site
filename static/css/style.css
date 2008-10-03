@@ -3,22 +3,6 @@
 	http://localhost:8000/media/style.css
 */
 
-/* RESET */
-
-html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin: 0; padding: 0; }
-
-h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th { font-size: 1em; font-weight: normal; font-style: normal; }
-
-ul,ol { list-style: none; }
-
-fieldset,img { border: none; }
-
-caption,th { text-align: left; }
-
-table { border-collapse: collapse; border-spacing: 0; }
-
-body { font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; background-color: #fff; color: #333; line-height: 1.4em; }
-
 /* vertical -------------------------------- */
 
 html { padding-top: 15px; }
@@ -116,19 +100,17 @@ h4 { font-weight: bold; font-size: 10px; line-height: 18px; }
 
 #midstrip .quote p { margin: 0px; padding: 0px; }
 
-/* content menu horizontal -------------------------------- */
-
-ul#content_menu { margin: 0px; padding: 0px; }
-
-ul#content_menu li { margin: padding-right: 1em; }
-
 /* content menu appearance -------------------------------- */
 
 #content_menu { font-size: 2em; margin-bottom: 0.75em; }
 
-#content_menu div, #content_menu div a, #content_menu div a:visited, #content_menu div a:hover { color: #00a000; x-color: blue; }
+/*#content_menu div { margin-left: -2px; }*/
 
-#content_menu div.active { font-weight: bold; }
+#content_menu div, #content_menu div a, #content_menu div a:visited, #content_menu div a:hover { color: #00a000; /*font-style: normal !important; */}
+
+#content_menu div.active { /*font-weight: bold;*/ }
+
+/*#content_menu div.inactive { border-bottom: 1px solid #00a000; }*/
 
 #content_menu div a, #content_menu div a:visited { text-decoration: underline; }
 
@@ -138,15 +120,45 @@ ul#content_menu li { margin: padding-right: 1em; }
 
 #footer { font-size: 9pt; text-align: center; }
 
-/* everything else -------------------------------- */
-
-/*blockquote { margin: 0px 20px; font-style: normal !important; }*/
+/* newer styles ----------------------------------- */
 
 blockquote.nomargin { margin-left: 0px; margin-right: 0px; }
 
 .success_story_sidebar { float: right; width: 400px; margin: 0px 0px 10px 30px; }
 
 .success_story_sidebar h2 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+
+span.sbrace {margin-right: 0.3em}
+span.hbrace {margin-left: -0.3em}
+
+span.squots {margin-right: 0.35em}
+span.hquots {margin-left: -0.35em}
+
+span.squot {margin-right: 0.5em}
+span.hquot {margin-left: -0.5em}
+
+span.slaquo {margin-right: 0.44em}
+span.hlaquo {margin-left: -0.44em}
+span.slaquo-s {margin-right: 0.55em}
+span.hlaquo-s {margin-left: -0.55em}
+
+span.sbdquo {margin-right: 0.35em}
+span.sbdquo:after { content: ' '; }
+span.hbdquo {margin-left: -0.35em}
+span.sbdquo-s {margin-right: 0.35em}
+span.sbdquo-s {margin-left: -0.35em}
+
+span.sowc {margin-right: 0.04em}
+span.howc {margin-left: -0.04em}
+
+span.sowcr {margin-right: 0.05em}
+span.howcr {margin-left: -0.05em}
+
+
+/* everything else -------------------------------- */
+
+/*blockquote { margin: 0px 20px; font-style: normal !important; }*/
+
 
 em { font-style: normal; background: #ffffcc; }
 
