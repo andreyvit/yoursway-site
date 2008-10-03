@@ -3,6 +3,8 @@
 	http://localhost:8000/media/style.css
 */
 
+#footer { font-size: 9pt; text-align: center; }
+
 /* vertical -------------------------------- */
 
 html { padding-top: 15px; }
@@ -116,9 +118,6 @@ h4 { font-weight: bold; font-size: 10px; line-height: 18px; }
 
 #content_menu div a:hover { color: #00c000; }
 */
-/* footer appearance -------------------------------- */
-
-#footer { font-size: 9pt; text-align: center; }
 
 /* newer styles ----------------------------------- */
 
