@@ -75,6 +75,14 @@ def menu(path):
             contentmenuitem(parent = active_global_item, name = 'qa', url = 'qa/', text = 'Productivity Q&A', cols = 6),
             contentmenuitem(parent = active_global_item, name = 'support', url = 'support/', text = 'Support', cols = 4),
         ]
+    elif active_global_item.name == 'free':
+        content_menu = [
+        contentmenuitem(parent = active_global_item, name = '', url = '', template = 'overview', text = "Overview", cols = 4),
+        contentmenuitem(parent = active_global_item, name = 'ProjectSync', url = 'ProjectSync/', text = 'ProjectSync', cols = 4),
+        # contentmenuitem(parent = active_global_item, name = 'ide-features', url = 'ide/features', text = '', visible = False),
+        # contentmenuitem(parent = active_global_item, name = 'mashups', url = 'mashups/', text = 'Desktop & Web app', cols = 7),
+        # contentmenuitem(parent = active_global_item, name = 'iphone', url = 'iphone/', text = 'iPhone app', cols = 4),
+        ]
     elif active_global_item.name == 'consulting':
         content_menu = [
         contentmenuitem(parent = active_global_item, name = '', url = '', template = 'overview', text = "Overview", cols = 4),

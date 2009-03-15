@@ -20,7 +20,7 @@ class PageHandler(BaseHandler):
     self.render_and_finish('site/' + active_item.template + '.html')
 
 url_mapping = [
-  ('^/([a-z0-9/-]*)$', PageHandler),
+  ('^/([A-Za-z0-9/-]*)$', PageHandler),
 ]
 
 application = webapp.WSGIApplication(url_mapping, debug=True)
