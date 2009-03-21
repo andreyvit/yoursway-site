@@ -53,7 +53,7 @@ def find_active_item(path, items):
     
 def menu(path):
     global_menu = [
-        # globalmenuitem(name = 'home',    url = '',  icon = 'icon-yoursway.png', template = 'index', alt = 'Home'),
+        globalmenuitem(name = 'home',    url = '',  icon = 'icon-yoursway.png', template = 'index', alt = 'Home'),
         # globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'Consulting'),
         globalmenuitem(name = 'consulting', url = '', icon = 'icon-yoursway.png',  alt = 'YourSway'),
         # globalmenuitem(name = 'ide',     url = 'ide/', active = False, icon = 'icon-ide.png',      alt = 'YourSway IDE'),

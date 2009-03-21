@@ -1,0 +1,59 @@
+/* @override http://localhost:3000/css/master.css */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; list-style-type: none; margin: 0; padding: 0; }
+
+body { font-family: Lucida Sans, Verdana, Arial, Verdana, sans-serif; }
+h1 { font-family: Lucida Sans, Verdana; }
+
+body { line-height: 22px; background: #fff; font-size: 13px; color: #222; margin: 0em 8% 0 8%;  min-width: 700px; }
+
+b { font-weight: normal; }
+
+a { color: #3F8CD1; }
+a:visited { color: #043B6C; }
+a:hover { background: #3F8CD1; color: white; }
+
+hr { background: #ddd; color: #ddd; float: none; height: .1em; border: none; margin: 0 0 1.4em; }
+
+hr.space { background: #fff; color: #fff; }
+
+hr.wide { margin-left: -9.52%; margin-right: -9.52%; width: 124%; }
+
+h1 { font-size: 24px; line-height: 1.5; margin-top: 1em; color: #772222; }
+h1 a:hover, em a:hover { background: #772222; color: white; }
+h1 a, em a, h1 a:visited, em a:visited { color: #B33232; }
+
+p { margin-top: 1em; }
+
+#our-team { color: #772222; margin: 0 -9.52% 0 -9.52%; padding: 4em 60% 4em 9.52%; line-height: 1.5; position: relative; background: transparent; font-size: 14px; border-bottom: 4px solid #D87474; }
+#our-team p { margin: 0px 0px 0px 0px; }
+#logo { margin: -64px 0 0 0; width: 405px; height: 128px; position: absolute; top: 50%; right: 10%; }
+
+#menu { display: none; } #our-team { margin-bottom: 56px; }
+#menu { margin: 0 -9.52% 56px -9.52%; padding: 0px 9.52% 0px 9.52%; border-bottom: 4px solid #D87474; }
+#menu li { display: inline; padding: 0 20px 0 0; }
+#menu li a { padding-top: 5px; padding-bottom: 5px; }
+/*#menu, #menu a, #menu a:visited { color: pink; text-decoration: none; }*/
+#menu, #menu a, #menu a:visited { text-decoration: none; }
+/*#menu a:hover { background: #D87474; color: #772222; }*/
+
+#our-products {  }
+
+#hire-us { margin: 0em 0 0 0%;  }
+#hire-us em { }
+
+#news { margin: 0 8% 56px -9.52%; padding: 0 8% 2.3em 9.52%; float: left; width: 32%; background: white; line-height: 1.5; font-size: 12px; background-color: #FFE0D6; margin-top: -56px; padding-top: 56px; }
+
+#news h1 { font-size: 18px; line-height: 36px; position: relative; margin-top: 0; padding-bottom: 4px; margin-top: 1.66em; white-space: nowrap; }
+
+#news h1.first { margin-top: 0; }
+
+#news .title { background: #772222; color: white; margin-left: 1.5ex; padding: 2px 4px; line-height: 1.5; font-size: 10px; text-align: center; position: relative; top: -2px; }
+
+#news em { color: #FF2A00; }
+
+.red { color: red; }
+
+.rd { margin-right: -0.333em; }
+
+.lq { margin-left: -0.333em; }

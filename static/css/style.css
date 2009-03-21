@@ -156,6 +156,9 @@ span.howcr {margin-left: -0.05em}
 
 /* everything else -------------------------------- */
 
+h2 a, h2 a:visited, h2 a:active { color: #000; }
+h2 span.badge { font-size: 50%; color: #777; }
+
 /*blockquote { margin: 0px 20px; font-style: normal !important; }*/
 
 
