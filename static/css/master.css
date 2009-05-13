@@ -1,11 +1,11 @@
-/* @override http://localhost:3000/css/master.css */
+/* @override http://localhost:8001/css/master.css */
 
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; list-style-type: none; margin: 0; padding: 0; }
 
 body { font-family: Lucida Sans, Verdana, Arial, Verdana, sans-serif; }
 h1 { font-family: Lucida Sans, Verdana; }
 
-body { line-height: 16px; background: #fff; font-size: 12px; color: #222; margin: 0 0 0 0;  min-width: 700px; }
+body { line-height: 16px; background: #fff; font-size: 12px; color: #222; margin: 0 0 0 0;  min-width: 700px; overflow: hidden; }
 
 b { font-weight: normal; }
 
@@ -13,43 +13,36 @@ a { color: #3F8CD1; }
 a:visited { color: #043B6C; }
 a:hover { background: #3F8CD1; color: white; }
 
-#cloud { position: fixed; width: 100%; padding: 0 4% 0 4%; height: 100%; }
-
-#identity { position: absolute; top: 50%; left: 50%; margin: -100px 0 0 -250px; width: 500px; height: 200px; }
+#identity { position: absolute; top: 50%; left: 50%; margin: -100px 0 0 -250px; width: 420px; height: 200px; }
+#identity p { padding-left: 60px; color: #772222; }
 
 #footer { position: fixed; width: 100%; padding: 0 4% 0 4%; line-height: 2; height: 2.4em; bottom: 0px; background-color: #FFE0D6; border-top: 4px solid #D87474;}
 #footer .link { display: inline; padding-right: 4%; background: ; }
 #footer a { color: #CD4C4C; }
 #footer a:hover { background: transparent; color: #FF2A00; }
 
-
-.bundle { position: absolute; width: 100%; }
-.bundle h2 { width: 20%; font-size: 18px; line-height: 28px; margin: 0; cursor: pointer; z-index: 1; }
+.bundle { }
+.bundle h2 { position: absolute; width: auto; font-size: 18px; line-height: 28px; margin: 0; padding: 4px 10px; cursor: pointer; z-index: 1; }
 .bundle h2.small { font-size: 14px; }
 .desc, .bubble { cursor: default;  }
-.desc { position: relative; width: 26%; padding: 0 2% 0 0; background: white; z-index: 2; }
+.desc { position: absolute; width: 250px; margin: 36px 0 0 0; padding: 0 10px 10px 10px; z-index: 2; }
 .bubble { background: white; position: absolute; top: 3.5em; left: 28%; width: 12%; border: 4px solid #D87474; padding: 0.5em 0.5em; z-index: 3; }
 /*.bubble .teaser { display: block; }*/
-.bubble .story { display: none; color: white; }
-.bubble.storymod .teaser { display: none; }
-.bubble.storymod .story { display: block; }
-.bubble.storymod { background: #D87474; top: 2em !important; width: 44%; }
-.bubble p { margin-top: 1em; }
-.bubble p:first-child { margin-top: 0; }
+.story { display: none; color: white; margin: 0px 0px 0px 4%; padding: 4% 4%; position: absolute; left: 0%; top: 0%; bottom: 0%; right: 0%;}
 
-#b-users { top: 8%; left: 16%; }
-#b-challenge { top: 60%; left: 12%; }
-#b-brain { top: 4%; left: 60%; }
-#b-experience { top: 76%; left: 52%; }
-#b-risks { top: 68%; left: 72%; }
-#b-mac { top: 32%; left: 4%; }
-#b-iphone { top: 16%; left: 32%; }
-#b-crashreporting { top: 16%; left: 76%; }
-#b-simplicity { top: 80%; left: 84%; }
-#b-agile { top: 84%; left: 8%; }
-#b-eclipse { top: 44%; left: 84%; }
-#b-developers { top: 36%; left: 16%; }
-#b-appengine { top: 76%; left: 28%; }
+#b-users h2 { top: 8%; left: 16%; }
+#b-challenge h2 { top: 60%; left: 12%; }
+#b-brain h2 { top: 4%; left: 60%; }
+#b-experience h2 { top: 76%; left: 52%; }
+#b-risks h2 { top: 68%; left: 72%; }
+#b-mac h2 { top: 32%; left: 4%; }
+#b-iphone h2 { top: 16%; left: 32%; }
+#b-crashreporting h2 { top: 16%; left: 76%; }
+#b-simplicity h2 { top: 80%; left: 84%; }
+#b-agile h2 { top: 84%; left: 8%; }
+#b-eclipse h2 { top: 44%; right: 4%; position: absolute; width: auto; text-align: right; }
+#b-developers h2 { top: 36%; left: 16%; }
+#b-appengine h2 { top: 76%; left: 28%; }
 /*#b- { top: 36%; left: 76%; }*/
 
 
@@ -62,6 +55,8 @@ hr.wide { margin-left: -9.52%; margin-right: -9.52%; width: 124%; }
 h1 { font-size: 24px; line-height: 1.5; margin-top: 1em; color: #772222; }
 h1 a:hover, em a:hover { background: #772222; color: white; }
 h1 a, em a, h1 a:visited, em a:visited { color: #B33232; }
+
+#cloud { width: 100%; height: 100%; position: absolute; }
 
 p { margin-top: 1em; }
 
