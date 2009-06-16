@@ -54,18 +54,20 @@ def find_active_item(path, items):
 def menu(path):
     global_menu = [
         globalmenuitem(name = 'home',    url = '',  icon = 'icon-yoursway.png', template = 'index', alt = 'Home'),
-        # globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'Consulting'),
-        globalmenuitem(name = 'consulting', url = '', icon = 'icon-yoursway.png',  alt = 'YourSway'),
-        # globalmenuitem(name = 'ide',     url = 'ide/', active = False, icon = 'icon-ide.png',      alt = 'YourSway IDE'),
-        # globalmenuitem(name = 'taskus',  url = 'taskus/',  icon = 'icon-taskus.png',   alt = 'Taskus'),
-        globalmenuitem(name = 'free', url = 'free/', icon = 'icon-free.png',  alt = 'Free Tools'),
-        globalmenuitem(name = 'aboutus', url = 'aboutus/', icon = 'icon-aboutus.png',  alt = 'About Us'),
-        globalmenuitem(name = 'blog', url = 'http://blog.yoursway.com/', icon = 'icon-blog.png',  alt = 'Blog'),
+        globalmenuitem(name = '*',    url = '*',  icon = 'icon-yoursway.png', template = 'index_int', alt = 'Home'),
+        # globalmenuitem(name = 'users',    url = 'helps/users/',  icon = 'icon-yoursway.png', template = 'index_int', alt = 'Home'),
+        # # globalmenuitem(name = 'consulting', url = 'consulting/', icon = 'icon-consulting.png',  alt = 'Consulting'),
+        # globalmenuitem(name = 'consulting', url = '', icon = 'icon-yoursway.png',  alt = 'YourSway'),
+        # # globalmenuitem(name = 'ide',     url = 'ide/', active = False, icon = 'icon-ide.png',      alt = 'YourSway IDE'),
+        # # globalmenuitem(name = 'taskus',  url = 'taskus/',  icon = 'icon-taskus.png',   alt = 'Taskus'),
+        # globalmenuitem(name = 'free', url = 'free/', icon = 'icon-free.png',  alt = 'Free Tools'),
+        # globalmenuitem(name = 'aboutus', url = 'aboutus/', icon = 'icon-aboutus.png',  alt = 'About Us'),
+        # globalmenuitem(name = 'blog', url = 'http://blog.yoursway.com/', icon = 'icon-blog.png',  alt = 'Blog'),
     ]
     
     path = path.lstrip('/')
-        
-    active_global_item = find_active_item(path, global_menu)
+    
+    active_global_item = global_menu[0] if path=='index' else global_menu[1] # find_active_item(path, global_menu)
     path = path[len(active_global_item.url) : -1]
     
     if active_global_item.name == 'taskus':

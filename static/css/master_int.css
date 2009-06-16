@@ -23,6 +23,8 @@ h1 { font-size: 24px; line-height: 1.5; margin-top: 1em; color: #772222; }
 h1 a:hover, em a:hover { background: #772222; color: white; }
 h1 a, em a, h1 a:visited, em a:visited { color: #B33232; }
 
+h2 { font-size: 18px; line-height: 1.5; margin-top: 1em; color: #772222; }
+
 p { margin-top: 1em; }
 
 #our-team { color: #772222; margin: 0 -9.52% 0 -9.52%; padding: 4em 60% 4em 9.52%; line-height: 1.5; position: relative; background: transparent; font-size: 14px; border-bottom: 4px solid #D87474; }
@@ -51,6 +53,8 @@ p { margin-top: 1em; }
 #news .title { background: #772222; color: white; margin-left: 1.5ex; padding: 2px 4px; line-height: 1.5; font-size: 10px; text-align: center; position: relative; top: -2px; }
 
 #news em { color: #FF2A00; }
+
+em { color: #FF2A00; }
 
 .red { color: red; }
 

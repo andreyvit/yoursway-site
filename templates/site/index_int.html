@@ -3,7 +3,7 @@
 <head>
   <title>We build cross-platform, native, web and mobile applications — YourSway</title>
   <meta name="keywords" content="consulting,custom development,cross-platform,mac,windows,python,django,ruby on rails,yoursway" />
-  <link rel="stylesheet" href="/css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/css/master_int.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -44,7 +44,9 @@
   <!-- <hr class="wide" style="margin-top: 1em; margin-bottom: 2em;" /> -->
   
   <div id="news">
-    <h1 class="first"><a href="http://crashkitapp.appspot.com/">CrashKit</a> beta launched<span class="title">News</span></h1>
+    <h1 class="first">
+      <a href="http://crashkitapp.appspot.com/">CrashKit</a> beta launched <span class="title">News</span>
+    </h1>
 
     <p>Do you want to see the bugs your customers experience?</p>
     
@@ -89,6 +91,359 @@
       brings Kilim into Eclipse. Kilim is an implementation of Erlang-style
       actor concurrency model, uses Java byte code instrumentation.
     </p> -->
+    
+  </div>
+  
+  <div>
+    <h1>iPhone</h1>
+    <h2><a name="things_to_know"></a>7 things to know before considering the iPhone platform</h2>
+    
+    <p>
+      <em>1: App Store.</em>
+      The only way to distribute applications for iPhone is through the App Store and iTunes.
+      Users cannot simply download the application from your web site.
+    </p>
+    
+    <p>
+      <em>2: Restrictions.</em>
+      Apple limits what App Store applications can do. The most important restrictions are:
+    </p>
+    <ul>
+      <li>• No background processing, only one application is active at a time.</li>
+      <li>• No way to intercept calls, SMSes or e-mails.</li>
+      <li>• No access to the calendar, call log, SMS log, e-mail database, ringtones.</li>
+      <li>• Have to follow Apple User Interface Guidelines.</li>
+      <li>• No duplication of built-in functionality.</li>
+      <li>• No adult or restricted content.</li>
+      <li>• No potentially offending content, including political sarcasm.</li>
+    </ul>
+    
+    <p>
+      <em>3: Rejection.</em>
+      Your application may be rejected from App Store based on Apple's sole judgement.
+      Usually you are told about the reason, and usually the problem can be fixed and
+      your application resubmitted.
+    </p>
+    <p>
+      In some cases, however, it's the nature of your application that is considered unsuitable.
+      Some well-known rejected applications include a countdown clock counting time till the end
+      of the republican parlament (rejected as offensive), and a podcast download application
+      (rejected as a duplicate of iTunes, even though it had many unique features).
+    </p>
+    <p>
+      There is no way to ask Apple if your application will be accepted or rejected without actually building it.
+      Do not invest in any applications at the borderline of what's allowed on the App Store,
+      or be prepared to loose your investment.
+    </p>
+    <p>
+      (See below for most common reasons for rejection.)
+    </p>
+    
+    <p>
+      <em>4: Revenue.</em>
+      Apple withholds 30% of your revenue; the remaining 70% are paid to your bank account monthly.
+      You need, however, to undergo a special legal procedure to avoid US taxes from being
+      automatically withheld, otherwise you end up with 49% of the revenues instead of 70%.
+    </p>
+    
+    <p>
+      <em>5: Subscription.</em>
+      To publish your application on the App Store under your company name,
+      you need to buy a $99/year subscription from Apple.
+    </p>
+    <p>
+      The application cannot be installed on any iPhone without buying a subscription,
+      so an iPhone developer needs a subscription too. (He can use his client's one, though.)
+      Only look for developers who own an active subscription,
+      others have not done any serious work yet.</p>
+    </p>
+    
+    <p>
+      <em>6: Testing.</em>
+      You need to test your application very throughly.
+      First, because an application that crashes during Apple's testing gets rejected immediately.
+      It takes about an hour to fix a crash and about a week to resubmit.
+    </p>
+    <p>
+      Second, because the users who experience a crash or a bug leave negative reviews and give you one-star ratings.
+      You cannot respond to those reviews and you cannot do anything about those ratings.
+      Even after you fix the bug the negative ratings and reviews will continue to affect your sales.
+      Many iPhone developers tell they are suffering from this.
+    </p>
+    
+    <p>
+      <em>7: Pricing.</em>
+      Every application is either free or paid.
+      $0.99 is the minimum price for paid apps, with other typical prices being $1.99, $2.99 and $4.99.
+      More pricey applications are rare, though some cost as much as $50 (and still sell quite well).
+    </p>
+    
+    <p>
+      Starting with iPhone OS 3.0 (to be released in June 2009), paid applications can have an in-application
+      store and sell additional items (e.g.: sell more books for a ebook app, sell more weapons for
+      a shooter app, sell 6 more months of subscription for a news app).
+    </p>
+    
+    <p>
+      There is no way to let users try your application before buying it.
+      Many vendors solve this problem by publishing a free lite version of their app separately.
+    </p>
+    
+    <h2>Let's talk</h2>
+    
+    <p>
+      If you are:<br>
+      • considering an iPhone application, or<br>
+      • have any doubts regarding whether your idea is suitable for the iPhone, or<br>
+      • want to know more about the iPhone market<br>
+      — please <a href="mailto:info@yoursway.com">e-mail us</a>, and we'll help you make the most of your idea.
+    </p>
+    
+    <p>
+      If you are an iPhone developer,
+      have a look at our <a href="http://github.com/andreyvit/ScrollingMadness/">UIScrollView tricks article+example</a>.
+    </p>
+    
+    <h2>Commons reasons for rejection </h2>
+    
+    <p>Functionality:</p>
+    
+    <ul>
+      <li>Application does not ask for confirmation before sending user's data (e.g. a taken picture) to the server.</li>
+      <li>Application does not display a message like “Loading…” while data (especially UIWebView) is being loaded.</li>
+      <li>When running on iPod Touch, the application shows a button to access a function (GPS, vibration, camera etc) not available on iPods.</li>
+      <li>Network errors are not handled properly: an appropriate message must be displayed (“Network is not available”), must not hang on “Loading…” indefinitely.</li>
+      <li>False claims of missing network connectivity.</li>
+      <li>Too much bandwidth usage over cellular network (GRPS/EDGE). Limit to about 4.5 Mb per 5 minutes of usage.</li>
+      <li>Incompatibility with any of the advertised OS versions. (If you claim to support 2.0, be sure to test on 2.0, 2.1, 2.2 and 2.2.1.)</li>
+    </ul>
+    
+    <p>User Interface Guidelines violation:</p>
+    
+    <ul>
+      <li>Keeping UITableView selection for too long: the application must deselect any selected rows immediately. (The blue color is used to express the click event and must not be used to display a permanent selection.)</li>
+      <li>Using UITableCell's detail disclosure button for something other than navigating to another page.</li>
+      <li>Simulating failures of any iPhone components (e.g. simulating a cracked screen).</li>
+      <li>In-place editing of rows inside UITableView (instead of e.g. adding UITextField to each row, you must navigate to another view for editing).</li>
+      <li>Hiding UIWebView toolbar.</li>
+      <li>Display of any functions not implemented in the application (so your free Lite edition must not show any paid-only functions).</li>
+      <li>Different version numbers specified in various places (e.g. Info.plist and iTunes Connect numbers do not match).</li>
+      <li>Version number too fancy (don't even try 0.0.0).</li>
+    </ul>
+    
+    <p>Texts:</p>
+    
+    <ul>
+      <li>Usage of “Limited” or “Beta” in application description (all functions of the app should already work properly). Only “Free” or “Lite” is allowed.</li>
+      <li>Incorrect usage of “iPhone Something” instead of “Something for iPhone” (e.g. “iPhone Games” instead of “Games for iPhone”).</li>
+      <li>Inaccurate app description: make sure all advertised functions exist and work.</li>
+      <li>Inaccurate “What's new” description for updates.</li>
+      <li>Political jokes (in the app itself or in the description).</li>
+    </ul>
+    
+    <p>Artwork/icons:</p>
+    
+    <ul>
+      <li>The 57x57 application icon is not a reduced-size version of the 512x512 icon for iTunes.</li>
+      <li>Usage of copyrighted Apple artwork.</li>
+      <li>Usage of any icon that resembles iPhone or iPod touch.</li>
+      <li>Standard “Action” icon does something other than opening an action sheet to select an action.</li>
+      <li>Using standard system icons for any purpose other than their indented one.</li>
+      <li>Anything sexual or erotic (not necessary nude: a game with a character in bikini can also be rejected).</li>
+    </ul>
+    
+    <p>If your application requires (some external service) account to operate, you must provide a test account. Make sure the test account works.</p>
+    
+    
+      
+    
+    <h2>Existing icons</h2>
+    
+    <p>
+      While you need a designer to create your application icon,
+      you might be lucky to obtain some of the other graphics cheaper or free.
+    </p>
+    
+    <p>
+      For some specific functions, iPhone has the icons <em>built-in</em>.
+      Those icons can only be used to invoke the intended functions (or your app will be rejected).
+      See 
+      <a href="http://developer.apple.com/iphone/library/documentation/UserExperience/Conceptual/MobileHIG/SystemProvided/SystemProvided.html#//apple_ref/doc/uid/TP40006556-CH15-SW2">the list of system-provided icons</a>
+      on the Apple Developer Connection web site
+      (note that you'll need to sign up or login, but the membership is free).
+    </p>
+    
+    <p>
+      Free icon sets:
+    </p>
+    <ul>
+      <li>• <a href="http://www.glyphish.com/">Glyphish toolbar/tabbar free icon set (many icons)</a></li>
+      <li>• <a href="http://www.glyfx.com/products/free_iphone.html">5 toolbar/tabbar icons from glyFX: “Home”, “Subscribe” (“Feeds”), “Update”, “Info”, “Help”</a></li>
+    </ul>
+    
+    <p>
+      Paid icon sets:
+    </p>
+    <ul>
+      <li>• <a href="http://www.eddit.com/shop/iphone_ui_icon_set/">eddit's toolbar/tabbar icon set (many icons)</a></li>
+      <li>• <a href="http://www.glyfx.com/shop/detail/iphone-messaging/">glyFX messaging icon set (toolbar/tabbar), 5 icons</a></li>
+      <li>• <a href="http://www.glyfx.com/shop/detail/iphone-multimedia/">glyFX multimedia icon set (toolbar/tabbar), 5 icons</a></li>
+    </ul>
+    
+    <p>
+      Note: never use any icons that resemble the iPhone device, or your application will be rejected.
+    </p>
+    
+    <h2>A quick guide for a designer</h2>
+    
+    <p>
+      There aren't many designers out there who have prior iPhone experience,
+      so you can often find yourself explaining the basics of the platform to your designer.
+    </p>
+    
+    <p>
+      <em>Application icon.</em>
+      At the very least every application needs a nice 57x57 full-color icon.
+      This icon represents the application on the main iPhone screen.
+      iPhone automatically adds rounded corders and overlays a “glossy” effect,
+      so even a simple drawing on a solid background will look good.
+    </p>
+    
+    <p>
+      Another option is to provide a so-called “prerendered” icon, with the rounded
+      corners and the glossy effect already added by the designer.
+    <p>
+      
+    <p>
+      It is best to open the App Store and look though the icons of popular applications
+      to grasp the idea of the iPhone style.
+    </p>
+      
+    <p>
+      The application icon also has to be provided in 512x512 variant
+      for the App Store and iTunes. These icons can only differ in size and details,
+      and cannot be severely different (or the app will be rejected).
+    </p>
+    
+    <p>
+      If you plan to create a free lite version of your app,
+      you are also required to make a slighly different icon for it.
+      A common practise is to add the word “free” somewhere,
+      often on a red background at the bottom of the icon.
+    </p>
+    
+    <p>
+      <em>Screen size.</em>
+      iPhone screen is 320x480 in portrait mode (480x320 in landscape),
+      however the upper 20 pixels are taken by the status bar
+      (which can be hidden if the developer wants to),
+      which leaves us 320x460 or 480x300 working area.
+    </p>
+    
+    <p>
+      Many applications have a so-called navigation bar at the top,
+      44 pixels high in portrait orientation and 32px high in landscape one.
+    </p>
+    
+    <p>
+      Many applications also have a tab bar or a toolbar at the bottom.
+      The tab bar is used to switch between screens, and is 49 pixels high.
+      The toolbar contains one or more buttons, and is 44/32 pixels high just like the navigation bar.
+    </p>
+    
+    <p>
+      <em>Toolbar and tab bar icons.</em>
+      You need to design a black-and-white mask (with alpha) about 30x30 px.
+      This mask is automatically applied to a white (inactive) or blue (active) gradient image.
+    </p>
+  
+    <p>
+      Some examples of the resulting icons can be found in
+      <a href="http://www.eddit.com/shop/iphone_ui_icon_set/">eddit's icon set</a>
+      (use your imagination to restore the original black-and-white masks)
+      and <a href="http://www.glyphish.com/">glyphish icon set</a>
+      (which gives a few examples of the masks and the resulting icons).
+    </p>
+    
+    <h1>Software for people</h1>
+    <p>
+      Pay attention to your users.
+      You have to solve their problems, not just get a product out.
+      Know your users.
+      Speak their language.
+      Help them kick ass.
+      Help them to be great at something.
+      Don't break the flow.
+    </p>
+    <p>
+      We take user interaction design seriously.
+      We study use cases, do usability testing and apply the theory of usability.
+      We recognize that users are most productive in flow state, and work hard to keep it.
+    </p>
+    <p>
+      We consider the impact on end users when making design decisions.
+      We carefully design error handling strategy.
+      We make sure our software does not break when users run out of disk space,
+      suffer power outages, disconnect removable devices and move their laptops around.
+    </p>
+    
+    <p>Stories about how design decisions affect end users.</p>
+    
+    <h1>Challenge</h1>
+    <p>
+      Every project is challenging because every project benefits from us doing our best.
+      Most need the best user experience possible and a well-designed, maintainable code.
+      Some need a prototype out fast.
+      Meeting the unique needs of every customer is never easy,
+      and so that’s what we love to do.
+    </p>
+    
+    <h1>Brain</h1>
+    <p>
+      Smart people make smart decisions.
+      It only takes one lousy component to make the whole application unstable,
+      and it takes one louse screen to break the user’s flow state.
+      So we need to get lots of big and small decisions right,
+      we need to not overlook thousands of corner cases and possible error conditions.
+    </p>
+    
+    <h1>Experience</h1>
+    <p>
+    </p>
+    
+    <h1>Risks</h1>
+    <p>
+    </p>
+    
+    <h1>Mac</h1>
+    <p>
+    </p>
+    
+    <h1>Eclipse</h1>
+    <p>
+    </p>
+    
+    <h1>Developers</h1>
+    <p>
+    </p>
+    
+    <h1>Google App Engine</h1>
+    <p>
+    </p>
+    
+    <h1>Agile</h1>
+    <p>
+    </p>
+    
+    <h1>Crash Reporting</h1>
+    <p>
+    </p>
+    
+    <h1>Simplicity</h1>
+    <p>
+      How to avoid overengineering?
+      You need to think before you code.
+    </p>
     
   </div>
   
